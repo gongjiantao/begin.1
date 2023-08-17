@@ -1,0 +1,442 @@
+/*旋转部分、、、、、、、、、、、、、、、、、、、、、、、、、、*/
+.section3 {
+    width: 1000px;
+    height: 680px;
+    margin: 40px auto 0px;
+    background: url(../img/xq/147_03.png) 32px 65px no-repeat;
+}
+
+.u_p3d {
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.section3 .ui_base {
+    position: relative;
+    top: 90px;
+    left: 280px;
+    width: 400px;
+    height: 0px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-perspective-origin: 50% 0%;
+    -moz-perspective-origin: 50% 0%;
+    -o-perspective-origin: 50% 0%;
+    -ms-perspective-origin: 50% 0%;
+    perspective-origin: 50% 0%
+}
+
+.section3 .ball_c {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: absolute;
+    width: 225px;
+    height: 157px;
+    line-height: 157px;
+    text-align: center;
+    background: url(../img/xq/jx.png) no-repeat;
+    left: 90px;
+    top: 100px;
+}
+
+.section3 .ball_c img {
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+.section3 .ball_c p {
+    margin-top: -70px;
+}
+
+.section3 .ball_c p a {
+    font-size: 19px;
+    font-family: ""
+}
+
+.section3 .base {
+    -webkit-transform: rotateX(80deg) rotateY(-10deg);
+    -moz-transform: rotateX(80deg) rotateY(-10deg);
+    -o-transform: rotateX(80deg) rotateY(-10deg);
+    -ms-transform: rotateX(80deg) rotateY(-10deg);
+    transform: rotateX(80deg) rotateY(-10deg);
+    position: relative;
+    width: 350px;
+    height: 350px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: -38px;
+    left: 40px;
+}
+
+.section3 .ball_base {
+    -webkit-transform-origin: 225px 0px;
+    -moz-transform-origin: 225px 0px;
+    -ms-transform-origin: 225px 0px;
+    -o-transform-origin: 225px 0px;
+    transform-origin: 225px 0px;
+    position: absolute;
+    top: 175px;
+    left: -50px;
+    width: 225px;
+    height: 127px
+}
+
+.section3 .ball_1 {
+    -webkit-transform: rotateX(-90deg) rotateY(0deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(0deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(0deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(0deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(0deg) translateY(-70px)
+}
+
+.section3 .ball_2 {
+    -webkit-transform: rotateX(-90deg) rotateY(60deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(60deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(60deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(60deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(60deg) translateY(-70px)
+}
+
+.section3 .ball_3 {
+    -webkit-transform: rotateX(-90deg) rotateY(120deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(120deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(120deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(120deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(120deg) translateY(-70px)
+}
+
+.section3 .ball_4 {
+    -webkit-transform: rotateX(-90deg) rotateY(180deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(180deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(180deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(180deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(180deg) translateY(-70px)
+}
+
+.section3 .ball_5 {
+    -webkit-transform: rotateX(-90deg) rotateY(240deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(240deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(240deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(240deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(240deg) translateY(-70px)
+}
+
+.section3 .ball_6 {
+    -webkit-transform: rotateX(-90deg) rotateY(300deg) translateY(-70px);
+    -ms-transform: rotateX(-90deg) rotateY(300deg) translateY(-70px);
+    -o-transform: rotateX(-90deg) rotateY(300deg) translateY(-70px);
+    -moz-transform: rotateX(-90deg) rotateY(300deg) translateY(-70px);
+    transform: rotateX(-90deg) rotateY(300deg) translateY(-70px)
+}
+
+.section3 .ball_1 .ball {
+    -webkit-transform: rotateY(10deg) rotateZ(10deg);
+    -moz-transform: rotateY(10deg) rotateZ(10deg);
+    -o-transform: rotateY(10deg) rotateZ(10deg);
+    -ms-transform: rotateY(10deg) rotateZ(10deg);
+    transform: rotateY(10deg) rotateZ(10deg)
+}
+
+.section3 .ball_2 .ball {
+    -webkit-transform: rotateY(-50deg) rotateZ(10deg);
+    -o-transform: rotateY(-50deg) rotateZ(10deg);
+    -ms-transform: rotateY(-50deg) rotateZ(10deg);
+    -moz-transform: rotateY(-50deg) rotateZ(10deg);
+    transform: rotateY(-50deg) rotateZ(10deg)
+}
+
+.section3 .ball_3 .ball {
+    -webkit-transform: rotateY(-110deg) rotateZ(10deg);
+    -o-transform: rotateY(-110deg) rotateZ(10deg);
+    -moz-transform: rotateY(-110deg) rotateZ(10deg);
+    -ms-transform: rotateY(-110deg) rotateZ(10deg);
+    transform: rotateY(-110deg) rotateZ(10deg)
+}
+
+.section3 .ball_4 .ball {
+    -webkit-transform: rotateY(-170deg) rotateZ(10deg);
+    -o-transform: rotateY(-170deg) rotateZ(10deg);
+    -moz-transform: rotateY(-170deg) rotateZ(10deg);
+    -ms-transform: rotateY(-170deg) rotateZ(10deg);
+    transform: rotateY(-170deg) rotateZ(10deg)
+}
+
+.section3 .ball_5 .ball {
+    -webkit-transform: rotateY(-230deg) rotateZ(10deg);
+    -o-transform: rotateY(-230deg) rotateZ(10deg);
+    -moz-transform: rotateY(-230deg) rotateZ(10deg);
+    -ms-transform: rotateY(-230deg) rotateZ(10deg);
+    transform: rotateY(-230deg) rotateZ(10deg)
+}
+
+.section3 .ball_6 .ball {
+    -webkit-transform: rotateY(-290deg) rotateZ(10deg);
+    -o-transform: rotateY(-290deg) rotateZ(10deg);
+    -ms-transform: rotateY(-290deg) rotateZ(10deg);
+    -moz-transform: rotateY(-290deg) rotateZ(10deg);
+    transform: rotateY(-290deg) rotateZ(10deg)
+}
+
+.section3 .ball {
+    -webkit-transition: all 2s ease-out 0ms;
+    -o-transition: all 2s ease-out 0ms;
+    -moz-transition: all 2s ease-out 0ms;
+    -ms-transition: all 2s ease-out 0ms;
+    transition: all 2s ease-out 0ms;
+    -webkit-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: absolute;
+    left: -200px;
+    top: -30px;
+    overflow: hidden;
+}
+
+.section3 .ball img {
+    width: 110px;
+    height: 110px;
+}
+
+.section3 .ball_1 .ball {
+    -webkit-transition-delay: 1100ms;
+    -o-transition-delay: 1100ms;
+    -moz-transition-delay: 1100ms;
+    -ms-transition-delay: 1100ms;
+    transition-delay: 1100ms;
+}
+
+.section3 .ball_2 .ball {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+}
+
+.section3 .ball_3 .ball {
+    -webkit-transition-delay: 700ms;
+    -o-transition-delay: 700ms;
+    -ms-transition-delay: 700ms;
+    -moz-transition-delay: 700ms;
+    transition-delay: 700ms;
+}
+
+.section3 .ball_4 .ball {
+    -webkit-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.section3 .ball_5 .ball {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.section3 .ball_6 .ball {
+    -webkit-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.section3 .ball_1 .ball {
+    -webkit-animation: cir1 28s linear 0s infinite;
+    -o-animation: cir1 28s linear 0s infinite;
+    -ms-animation: cir1 28s linear 0s infinite;
+    -moz-animation: cir1 28s linear 0s infinite;
+    animation: cir1 28s linear 0s infinite
+}
+
+.section3 .ball_2 .ball {
+    -webkit-animation: cir2 28s linear 0s infinite;
+    -o-animation: cir2 28s linear 0s infinite;
+    -ms-animation: cir2 28s linear 0s infinite;
+    -moz-animation: cir2 28s linear 0s infinite;
+    animation: cir2 28s linear 0s infinite
+}
+
+.section3 .ball_3 .ball {
+    -webkit-animation: cir3 28s linear 0s infinite;
+    -o-animation: cir3 28s linear 0s infinite;
+    -ms-animation: cir3 28s linear 0s infinite;
+    -moz-animation: cir3 28s linear 0s infinite;
+    animation: cir3 28s linear 0s infinite
+}
+
+.section3 .ball_4 .ball {
+    -webkit-animation: cir4 28s linear 0s infinite;
+    -o-animation: cir4 28s linear 0s infinite;
+    -ms-animation: cir4 28s linear 0s infinite;
+    -moz-animation: cir4 28s linear 0s infinite;
+    animation: cir4 28s linear 0s infinite
+}
+
+.section3 .ball_5 .ball {
+    -webkit-animation: cir5 28s linear 0s infinite;
+    -o-animation: cir5 28s linear 0s infinite;
+    -ms-animation: cir5 28s linear 0s infinite;
+    -moz-animation: cir5 28s linear 0s infinite;
+    animation: cir5 28s linear 0s infinite
+}
+
+.section3 .ball_6 .ball {
+    -webkit-animation: cir6 28s linear 0s infinite;
+    -o-animation: cir6 28s linear 0s infinite;
+    -ms-animation: cir6 28s linear 0s infinite;
+    -moz-animation: cir6 28s linear 0s infinite;
+    animation: cir6 28s linear 0s infinite
+}
+
+.section3 .base {
+    -webkit-animation: cir 28s linear 0s infinite;
+    -o-animation: cir 28s linear 0s infinite;
+    -ms-animation: cir 28s linear 0s infinite;
+    -mozanimation: cir 28s linear 0s infinite;
+    animation: cir 28s linear 0s infinite
+}
+
+@-webkit-keyframes cir1 {
+    0% {
+        -webkit-transform: rotateY(0deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-360deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir1 {
+    0% {
+        transform: rotateY(0deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-360deg) rotateZ(10deg)
+    }
+}
+
+@-webkit-keyframes cir2 {
+    0% {
+        -webkit-transform: rotateY(-60deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-420deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir2 {
+    0% {
+        transform: rotateY(-60deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-420deg) rotateZ(10deg)
+    }
+}
+
+@-webkit-keyframes cir3 {
+    0% {
+        -webkit-transform: rotateY(-120deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-480deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir3 {
+    0% {
+        transform: rotateY(-120deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-480deg) rotateZ(10deg)
+    }
+}
+
+@-webkit-keyframes cir4 {
+    0% {
+        -webkit-transform: rotateY(-180deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-540deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir4 {
+    0% {
+        transform: rotateY(-180deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-540deg) rotateZ(10deg)
+    }
+}
+
+@-webkit-keyframes cir5 {
+    0% {
+        -webkit-transform: rotateY(-240deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-600deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir5 {
+    0% {
+        transform: rotateY(-240deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-600deg) rotateZ(10deg)
+    }
+}
+
+@-webkit-keyframes cir6 {
+    0% {
+        -webkit-transform: rotateY(-300deg) rotateZ(10deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-660deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir6 {
+    0% {
+        transform: rotateY(-300deg) rotateZ(10deg)
+    }
+    100% {
+        transform: rotateY(-660deg) rotateZ(10deg)
+    }
+}
+
+@keyframes cir {
+    0% {
+        transform: rotateX(80deg) rotateY(-10deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(80deg) rotateY(-10deg) rotateZ(-360deg)
+    }
+}
+
+@-webkit-keyframes cir {
+    0% {
+        -webkit-transform: rotateX(80deg) rotateY(-10deg) rotateZ(0deg)
+    }
+    100% {
+        -webkit-transform: rotateX(80deg) rotateY(-10deg) rotateZ(-360deg)
+    }
+}
+
+
