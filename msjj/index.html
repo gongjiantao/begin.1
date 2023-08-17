@@ -1,0 +1,871 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="static/images/cd2314479c381fec800c9fde79fe655.jpg">
+    <title>个人简历</title>
+    <style id="styleContent"></style>
+    <style>
+
+
+
+*{margin:0;padding: 0;box-sizing: border-box;}
+body{
+    height: 100vh;
+}
+li{list-style: none;}
+html{font-family: 宋体;}
+#codeEdit{
+    width: 48%;
+    height: 97vh;
+    margin: auto 0;
+}
+#resume{
+    width: 48%;
+    min-width: 700px;
+    margin: auto 0;
+    position: relative;
+    height: 97vh;
+    overflow-y: scroll;
+    display: flex;
+}
+.ul-list li::before{
+    content: '♦';
+    color: #78B1E8;
+    padding-right: 15px;
+    font-size: 20px;
+    font-family: '-webkit-pictograph';
+}
+.ul-list + .ul-list{
+    margin-top: 10px;
+}
+.tag{
+    color: #ff4614;
+}
+.footer-height{
+    height: 200px;
+}
+.mr{
+    margin-right: 40px;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+}
+.balloon-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+    animation: balloon-ani .8s;
+}
+@keyframes balloon-ani{
+    0%{
+        left: -100vw;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+img[id*="bg-balloon-"]{
+    position: absolute;
+}
+img#bg-balloon-large{
+    transform: translateY(-17%);
+    right: -55px;
+}
+img#bg-balloon-small{
+    width: 135px;
+    right: 45px;
+    transform: translateY(-10%);
+}
+img#bg-balloon-logo{
+    height: 120px;
+    right: 0;
+}
+.line-wrap{
+    top: 0;
+    padding-left: 20px;
+    display: flex;
+    height: 100%;
+    animation: line-wrap-ani .8s;
+}
+@keyframes line-wrap-ani{
+    0%{
+        transform: translateX(100vw);
+    }
+    20%{
+        height: 0;
+    }
+    100%{
+        transform: translateX(0);
+        height: 100%;
+    }
+}
+.line-wrap > div{
+    width: 8px;
+    height: 100%;
+}
+.line-left{
+    background-color: #FFDF7F;
+    margin-right: 12px;
+}
+.line-right{
+    display: flex;
+    flex-direction: column;
+}
+.line-defColor{
+    background-color: #F3D383;
+}
+.line-midColor{
+    background-color: #F3C583;
+}
+.line-darkColor{
+    background-color: #EDAF45;
+}
+.line-item1{
+    height: 20%;
+}
+.line-item2{
+    height: 20px;
+    flex-shrink: 0;
+}
+.line-item3{
+    height: 30px;
+    flex-shrink: 0;
+}
+.line-item4{
+    height: 20%;
+    flex-shrink: 0;
+}
+.line-item5{
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+.line-item6{
+    height: 10%;
+    flex-shrink: 0;
+}
+.line-item7{
+    height: 8%;
+    flex-shrink: 0;
+}
+.line-item8{
+    height: 8%;
+    flex-shrink: 0;
+}
+.text-wrap{
+    margin-left: 30px;
+    padding: 40px 50px 40px 0;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+.inten{
+    color: #EF8C06;
+}
+.text-title{
+    margin-top: 15px;
+    color: #548DD4;
+    margin-bottom: 5px;
+}
+.base-info{
+    display: flex;
+}
+.base-info>div:first-child{
+    margin-right: 100px;
+}
+.project-title{
+    font-weight: 700;
+}
+
+@media (min-width: 500px){
+    /* 滚动条美化 */
+    *::-webkit-scrollbar-track-piece {
+        background-color:#f8f8f8;
+    }
+    *::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: rgba(150, 150, 150, .2);
+        background-clip:padding-box;
+        min-height:28px;
+        border-radius: 5px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+        background-color:#bbb;
+    }
+    .sbShow::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        background-clip:padding-box;
+        min-height: 28px;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 500px){
+    body{
+        flex-direction: column;
+    }
+    #resume,
+    #codeEdit{
+        height: 50vh!important;
+        width: 100vw!important;
+        min-width: 100vw!important;
+    }
+    .line-wrap{
+        padding-left: 5px;
+    }
+    .line-left{
+        padding-left: 8px;
+    }
+    .text-wrap{
+        margin-left: 15px;
+        padding: 60px 30px 40px 0;
+    }
+    img#bg-balloon-small {
+        width: 85px;
+        right: 32px;
+        transform: translateY(-10%);
+    }
+    img#bg-balloon-large {
+        transform: translateY(-17%);
+        right: -40px;
+        width: 105px;
+    }
+    img#bg-balloon-logo {
+        height: 62px;
+    }
+    .base-info{
+        display: block;
+    }
+    .school span{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+	background: none;
+	/* text-shadow: 0 1px white; */
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	/* background: #f5f2f0; */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.punctuation {
+	color: #fff;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+
+    </style>
+</head>
+<body>
+    <pre id="codeEdit" class="language-css" onscroll="toggleScrollBar(event)"></pre>
+    <div id="resume" onscroll="toggleScrollBar(event)"></div>
+</body>
+<!--文字js-->
+<script>
+
+let parentList = []
+let List = [] 
+function writeText(item, childArr=[], childIndex, parent=document.querySelector('.text-wrap')) {
+    let data = {}
+    if(childArr.length > 0){
+        data = childArr[childIndex]
+    }else {
+        data = item
+    }
+    let num = 0;
+    let text = data.text ? data.text : ''
+    let dom = document.createElement(data.name)
+    dom.setAttribute('class', data.class || '')
+    parent.appendChild(dom)
+    let timer = setInterval(() => {
+        if(num <= text.length){
+            dom.innerHTML = text.substr(0, num)
+            resume.scrollTop = 100000
+            num++
+        }else{
+            clearInterval(timer)
+            if (data.children) {
+                List.push({
+                    ance: data.children,
+                    current: 0,
+                    length: data.children.length
+                })
+                parentList.push(dom)
+                writeText('', data.children, 0, dom)
+            }else if (childArr.length > 0) {
+                if(childArr.length-1 > childIndex){
+                    writeText('', childArr, ++childIndex, parentList[parentList.length-1])
+                    List[List.length-1].current = List[List.length-1].current + 1
+                }else {
+                    parentList.pop()
+                    filterLength()
+                }
+            }else if (textArr.length-1 > currentIndex_) { // 
+                writeText(textArr[++currentIndex_])
+                parentList = []
+            }
+        }
+    }, 55);
+}
+function filterLength () {
+    for (let i = List.length-1; i >=0; i--) {
+        if(List[i].length-1 == List[i].current){
+            List.pop()
+        }else{
+            List[List.length-1].current = List[List.length-1].current + 1
+            break;
+        }
+    }
+    if(List.length>0){
+        writeText('', List[List.length-1].ance, List[List.length-1].current,parentList[parentList.length-1])
+    }else if(textArr.length-1 > currentIndex_){
+        writeText(textArr[++currentIndex_])
+        parentList = []
+    }
+}
+
+
+
+
+let textArr = [
+    {
+        name: 'h2',
+        class: 'inten',
+        text: '求职意向：前端开发工程师'
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '基本信息'
+    }, {
+        name: 'div',
+        class: 'base-info',
+        children: [{
+            name: 'div',
+            children: [{
+                name: 'div',
+                text: '姓名：龚建涛'
+            },{
+                name: 'div',
+                text: '年龄：18'
+            }]
+        }, {
+            name: 'div',
+            children: [{
+                name: 'div',
+                text: '暂定毕业学校：重庆市聚英技工学校'
+            },{
+                name: 'div',
+                text: '联系电话:19123910193'
+            }]
+        }]
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '教育背景'
+    }, {
+        name: 'div',
+        class: 'school',
+        children: [{
+            name: 'span',
+            class: 'mr',
+            text: '学校：重庆市聚英技工学校'
+        }, {
+            name: 'span',
+            text: '专业：计算机与应用'
+        }, {
+            name: 'div',
+            text: '主修课程：HTML、CSS、JavaScript、Vue、c、c#、MySQL',
+        }]
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '专业技能'
+    }, {
+        name: 'ul',
+        class: 'ul-list',
+        children: [{
+            name: 'li',
+            text:'熟练掌握',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: 'H5、CSS3、js'
+            }]
+        }, {
+            name: 'li',
+            text:'能熟练运用不同主流UI框架ElementUI及多个pc端UI框架'
+        }, {
+            name: 'li',
+            text:'掌握前端主流',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: 'Vue框架'
+            }]
+        }, {
+            name: 'li',
+            text:'熟练掌握',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: 'H5混合网页开发'
+            }, {
+                name: 'span',
+                text: '，跨多端技术uni-app、apicloud'
+            }]
+        }, {
+            name: 'li',
+            text:'了解微信小程序开发'
+        }, {
+            name: 'li',
+            text:'熟悉前端语言h5、css3、js、c#'
+        }, {
+            name: 'li',
+            text: '熟悉',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: 'css预处理器'
+            }, {
+                name: 'span',
+                text: 'sass、stylus以及前端构建工具webpack和sql包数据管理库'
+            }]
+        }]
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '项目经历'
+    }, {
+        name: 'div',
+        class: 'work', 
+        children:[{
+            name: 'span',
+            class: 'mr',
+            text: '2018.08 — 2019.06'
+        }, {
+            name: 'span',
+            text: 'web前端开发'
+        }]
+    }, {
+        name: 'ul',
+        class: 'ul-list',
+        children: [{
+            name: 'li',
+            text:'担任项目全部前端技术',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: '人物安排、BUG解决、产品优化、ui优化'
+            }]
+        }, {
+            name: 'li',
+            text: '负责小组项目开发（h5、css3、js）,其他学校基础项目开发'
+        }]
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '项目经验'
+    }, {
+        name: 'div',
+        class: 'item-lv',
+        children: [{
+            name: 'ul',
+            class: 'ul-list',
+            children: [{
+                name: 'li',
+                class: 'project-title',
+                text: '项目一：重庆简介'
+            }, {
+                name: 'li',
+                text: '使用技术栈:teable框架、',
+                children: [{
+                    name: 'span',
+                    class: 'tag',
+                    text: '初学第一个项目'
+                }]
+            }, {
+                name: 'li',
+                text: '项目描述：基于teable搭建的web网站,多功能，多内容，'
+            }]
+        }, {
+            name: 'ul',
+            class: 'ul-list',
+            children: [{
+                name: 'li',
+                class: 'project-title',
+                text: '项目二：筑梦航天'
+            }, {
+                name: 'li',
+                text: '使用技术栈：',
+                children: [{
+                    name: 'span',
+                    class: 'tag',
+                    text: 'bootstrap全家桶、'
+                }, 
+                 {
+                    name: 'span',
+                    class: 'tag',
+                    text: 'cube-ui'
+                }, {
+                    name: 'span',
+                    text: '框架、'
+                }, {
+                    name: 'span',
+                    class: 'tag',
+                    text: 'ApiCloud跨多端打包'
+                }]
+            }, {
+                name: 'li',
+                text: '项目描述：航天简介，航天展示，页面布局明朗，内容简约得体'
+            }]
+        }, {
+            name: 'ul',
+            class: 'ul-list',
+            children: [{
+                name: 'li',
+                class: 'project-title',
+                text: '项目三：APP，家庭朋友圈'
+            }, {
+                name: 'li',
+                text: '使用技术栈：',
+                children: [{
+                    name: 'span',
+                    class: 'tag',
+                    text: 'Axios、Stylus'
+                }, {
+                    name: 'span',
+                    text: '、YDUI、Vue-awesome-swiper'
+                }]
+            }, {
+                name: 'li',
+                text: '项目描述:1. cli脚手架搭建项目'
+            }, {
+                name: 'li',
+                text: '2. 使用Router做应用页面跳转,路由导航守卫权限控制,params、query传参'
+            }, {
+                name: 'li',
+                text: '3. Axios用做Ajax数据交互，dev环境下配置代理解决跨域，使用createAPI配置baseURL。'
+            }, 
+             {
+                name: 'li',
+                text: '4. 使用UI框架YDUI，减少不必要的造轮子，提高代码编写效率，用户体验。'
+            }, {
+                name: 'li',
+                text: '5. 使用awesome-swiper保证数据传输时避免sql注入。'
+            }]
+        }, {
+            name: 'ul',
+            class: 'ul-list',
+            children: [{
+                name: 'li',
+                class: 'project-title',
+                text: '项目四:努力开发中'
+            }, {
+                name: 'li',
+                text: '使用技术栈：',
+                children: [{
+                    name: 'span',
+                    class: 'tag',
+                    text: '?'
+                }]
+            }, {
+                name: 'li',
+                text: '?'
+            }]
+        }]
+    }, {
+        name: 'h4',
+        class: 'text-title',
+        text: '自我评价'
+    }, {
+        name: 'ul',
+        class: 'ul-list',
+        children: [{
+            name: 'li',
+            text:'具有',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: '团队管理经验'
+            }, {
+                name: 'span',
+                text: '，拥有良好的'
+            }, {
+                name: 'span',
+                class: 'tag',
+                text: '团队协调能力'
+            }, {
+                name: 'span',
+                text: '，开发当中和同学配合默契'
+            }]
+        }, {
+            name: 'li',
+            text:'常混迹于',
+            children: [{
+                name: 'span',
+                class: 'tag',
+                text: '前端主流社区'
+            }, {
+                name: 'span',
+                text: '（github、掘金、csdn、简书），翻阅前端'
+            }, {
+                name: 'span',
+                class: 'tag',
+                text: '大咖'
+            }, {
+                name: 'span',
+                text: '博客（张鑫旭、阮一峰、鱼皮）'
+            }]
+        }, {
+            name: 'li',
+            text:'热爱前端、思维活跃、学习能力强，抗压能力强。'
+        }, {
+            name: 'li',
+            text:'性格随和、诚恳稳重、身体素质较好、能够很快地适应新环境。'
+        }]
+    }
+]
+let style = `
+    /*
+    * 面试官你好，我是龚建涛，重庆人
+    * 下面为您精心准备一份不一样的简历来介绍自己
+    * 首先准备一些样式
+    */
+    *{
+        transition: all .8s;
+    }
+    /* 稍等，在容器上添加点样式 */
+    #codeEdit{
+        color: #fff;
+        background: #1E1E1E;
+    }
+    #resume{
+        box-shadow: -1px 4px 9px 3px rgba(0, 0, 0, .15);
+    }
+    /* 我需要一点代码高亮 */
+    pre#codeEdit{
+        color: #CE9e78;
+    }
+    .token.selector{
+        color: rgb(230, 155, 43);
+    }
+    .token.comment{
+        color: #6A9955;
+        font-size: 14px;
+    }
+    .token.property{
+        color: #60C8FE;
+    }
+    .token.function {
+        color: #DD4A68;
+    }
+    /* 接下来请欣赏我的个人简历吧 */
+`
+let balloon = `
+    <div class="balloon-wrap">
+        <img src="static/images/balloon.png" id="bg-balloon-small">
+        <img src="static/images/balloon.png" id="bg-balloon-large">
+        <img src="static/images/logo.png" id="bg-balloon-logo">
+    </div>
+    <div class="connect" style="width: 100%; display: flex;"></div>`
+let line = `
+    <div class="line-wrap">
+        <div class="line-left"></div>
+        <div class="line-right">
+            <p class="line-defColor line-item1"></p>
+            <p class="line-darkColor line-item2"></p>
+            <p class="line-defColor line-item3"></p>
+            <p class="line-midColor line-item4"></p>
+            <p class="line-darkColor line-item5"></p>
+            <p class="line-midColor line-item6"></p>
+            <p class="line-darkColor line-item7"></p>
+            <p class="line-midColor line-item7"></p>
+        </div>
+    </div>
+    <div class="connect"></div>`
+let text = `
+    <div class="text-wrap"></div>
+`
+
+
+
+    let currentIndex_ = 0
+    function writeIntro (intro='', time, callback) {
+        let connect = document.querySelectorAll('.connect')
+        if(connect.length < 1){
+            resume.innerHTML = intro
+        }else{
+            connect[connect.length-1].innerHTML = intro
+        }
+        setTimeout(() => {
+            callback()
+        }, time);
+    }
+    function startResume () {
+        writeIntro(balloon, 700, ()=>{
+            writeIntro(line, 200, ()=>{
+                writeIntro(text, 0, ()=>{
+                    writeText(textArr[currentIndex_])
+                })
+            })
+        })
+    }
+    
+    let num = 0
+    let t = setInterval(() => {
+        if(num <= style.length){
+            codeEdit.innerHTML = Prism.highlight(style.substr(0, num), Prism.languages.css); 
+            codeEdit.scrollTop = 100000
+            styleContent.innerHTML = style.substr(0, num)
+            num++
+        }else{
+            clearInterval(t)
+        }
+    }, 70)
+    setTimeout(() => {
+        if(document.body.clientWidth < 500){
+            setTimeout(() => {
+                resume.style.cssText = 'height:70vh!important'
+            }, 5000);
+        }
+        startResume()
+    }, 10000);
+</script>
+<script src="static/js/prism.js"></script>
+<script>
+    let sbTimer = null
+    function toggleScrollBar (self) {
+        self = self.target
+        clearTimeout(sbTimer)
+
+        if(self.getAttribute('class') != 'sbShow')
+            self.classList.add('sbShow')
+
+        sbTimer = setTimeout(() => {
+            self.classList.remove('sbShow')
+        }, 800);
+    }
+</script>
+</html>
