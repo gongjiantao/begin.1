@@ -1,0 +1,145 @@
+html, body{
+	min-height: 100%;
+	background: #4eac84;
+	line-height:24px;
+}
+*{
+	margin:0;
+	padding:0;
+	font-size: 12px;
+}
+ul{
+	list-style:none;
+}
+item-group
+.hide{
+    display: none;
+}
+.lf{
+	float: left;
+}
+
+.lr{
+	float: right;
+}
+.red, .red a,.red a h5, .red a p{
+    color:#FF0000 !important;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.mr2 {
+	margin-right: 1rem;
+}
+.ml2 {
+	margin-left: 1rem;
+}
+p{
+	text-indent: 24px;
+	text-align: left;
+}
+.article-title {
+	font-size: 2.3rem;
+	color: #333;
+	line-height: 1;
+	text-align: center;
+	letter-spacing: 0.025em;
+	transition: font-size 0.45s ease-in-out, color 0.2s ease-out;
+}
+.header-image {
+	margin-bottom: 2rem;
+	position: relative;
+	transition: all 0.45s ease-in-out;
+}
+.header-image img{
+	width: 100%;
+}
+
+.title-wrap {
+	transform: translateY(0);
+	transition: transform 0.45s ease-in;
+}
+.drop-cap {
+	font-size: 55px;
+	line-height: 28px;
+}
+.main-group{
+	display: flex;
+	align-items: center;
+	justify-content:space-evenly
+}
+.item-group {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.book_cover-exerpt {
+	color: #6a6a6a;
+	padding: 1rem 1.5rem;
+	opacity: 1;
+	max-width: 370px;
+	margin: 0 auto;
+	display: block;
+	transition: all 0.25s ease-in-out;
+}
+
+.book_cover {
+	width: 100%;
+}
+.book_content {
+	text-align: justify;
+	word-wrap: break-word;
+	font-size: 1.1rem;
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+	max-width: 750px;
+	margin: 0 auto 6rem;
+	padding: 0 2rem;
+}
+.book_content p {
+	line-height: 1.8;
+	color: #3a3a3a;
+	margin-bottom: 2.5rem;
+}
+.book {
+	overflow: hidden;
+	background: #fff;
+	height: 400px;
+	width: 340px;
+	box-shadow: 0 20px 30px -10px #ccc;
+	transition: all 0.5s ease-in-out;
+}
+.book:hover {
+	box-shadow: 0 6px 50px 10px #cfcfcf;
+}
+
+.zoom-group {
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+}
+.zoom-group .overlay {
+	opacity: 0.95;
+}
+.zoom-group .article-title {
+	color: white;
+	font-size: 64px;
+	letter-spacing: 0.05em;
+}
+.zoom-group .title-wrap {
+	transform: translateY(-300px);
+	color: white;
+	height:0;
+}
+.zoom-group .book_cover-exerpt {
+	opacity: 0;
+	display: none;
+}
+.zoom-group .book_cover {
+	margin-bottom: 6rem;
+}
+.zoom-group .book_content {
+	opacity: 1;
+}

@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ * 图片不能商用，代码可商用。
+ 
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+tab-card
+*{padding:0;margin:0;font-family:"微软雅黑";box-sizing:border-box;outline:none;color:inherit;font-size:inherit;font-weight:normal}
+:after,:before{box-sizing:inherit}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.overflow-hide{overflow:hidden}
+.col-sm-3{width:25%;float:left;position:relative}
+.pavilion-container{padding-bottom:50px;background:url(../images/yanxuanguan_bg.jpg);background-size:cover;background-repeat:no-repeat;background-position:center;min-height:720px}
+.layer-title{padding:50px 0 30px;text-align:center;font-size:30px;color:#fff;letter-spacing:1.09px}
+/*tab分类*/
+.pavilion-container .pavilion-inner{max-width:1200px;margin:0 auto}
+.pavilion-container .pavilion-inner .tabs{padding:0 10px}
+.pavilion-container .pavilion-inner .tabs li{float:left;padding:0 21px;border:1px solid #c9a467;border-radius:2px;line-height:36px;font-size:16px;color:#c9a467;letter-spacing:.35px}
+.pavilion-container .pavilion-inner .tabs li{margin-left:21.2667px;cursor:pointer}
+.pavilion-container .pavilion-inner .tabs li:first-child{margin-left:0}
+.pavilion-container .pavilion-inner .tabs li.on{background:#c9a467;color:#1c1f36}
+.pavilion-container .pavilion-inner .tabs li .hot-icon{width:18px;height:24px;background:url(../images/marketplace-selected-fire-leave.svg);margin-right:10px;background-repeat:no-repeat}
+.pavilion-container .pavilion-inner .tabs li.on .hot-icon{background:url(../images/marketplace-selected-fire.svg)}
+.pavilion-container .pavilion-inner .tabs li>span{display:inline-block;vertical-align:middle}
+/*tab内容*/
+.pavilion-container .tab-content-wrap{position:relative;margin-top:20px;height:420px}
+.pavilion-container .tab-content{position:absolute;top:65px;transition:all .5s linear;opacity:0;z-index:-1;height:0;width:100%}
+.pavilion-container .tab-content.show{height:auto;opacity:1;top:0;z-index:1}
+.pavilion-container .tab-content .col-sm-3{padding:0 10px}
+.pavilion-container .tab-content .col-sm-3 .tab-card{position:relative;padding:20px;background:#fff;border-radius:2px;overflow:hidden;cursor:pointer;transition:.2s linear}
+/*大卡片*/
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg{position:relative;height:420px}
+.pavilion-container .tab-content .col-sm-3 .tab-card:before{position:absolute;content:'';top:0;left:0;right:0;height:4px;border-radius:1px 1px 0 0}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg img{height:90px;width:auto;display:block}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg h3{margin-top:30px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.pavilion-container .tab-content .col-sm-3 .tab-card p{margin-top:5px;font-size:12px;color:#a0a2a8;letter-spacing:.51px;line-height:20px;height:20px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg .labels{margin-top:10px;margin-right:10px;padding-bottom:20px}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg .labels span{display:inline-block;margin-top:10px;margin-right:10px;padding:0 5px;background:rgba(160,162,168,.1);border:1px solid rgba(102,106,117,.1);border-radius:2px;line-height:20px;color:#a0a2a8;font-size:12px}
+.pavilion-container .tab-content .col-sm-3 .tab-card-lg .time{border-top:1px solid #e7e7e7}
+/*中卡片*/
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-md+.tab-card-md{margin-top:20px}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-md{height:200px}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-md img{height:65px;width:auto;display:block}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-md h3{margin-top:25px}
+.pavilion-container .tab-content .col-sm-3 .tab-card .time{position:absolute;bottom:10px;width:calc(100% - 40px);padding-top:17px;font-size:12px;color:#666a75;letter-spacing:.44px;line-height:23px;text-align:left}
+.pavilion-container .tab-content .col-sm-3 .tab-card .time span{font-size:20px;color:#f66f6a;letter-spacing:0;line-height:23px;margin-right:3px}
+/*小卡片*/
+
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-sm{height:90px}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-sm+.tab-card-sm{margin-top:20px}
+.pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-sm .time{border-top-width:0}
+.pavilion-container .tab-content .col-sm-3 .tab-card:hover {background:#e0c7bb;}
+/*查看全部*/
+.pavilion-container .view-go{margin-top:35px;font-size:18px;color:#fff;text-align:center}
+.pavilion-container .view-go a span.arrow-more{display:inline-block;vertical-align:middle}
+.pavilion-container .view-go a span.arrow-f{width:13px;height:13px;background:url(../images/marketplace-selected-arrow1.svg);display:inline-block;vertical-align:middle;margin-left:10px;position:relative;transition:.3s ease-out}
+.pavilion-container .view-go a:hover{color:#c9a467}
+.pavilion-container .view-go a:hover span.arrow-f{transform:translate(4px,0);background:url(../images/marketplace-selected-arrow2.svg)}

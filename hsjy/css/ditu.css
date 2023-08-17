@@ -1,0 +1,393 @@
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+body {
+    font-family: 'Microsoft Yahei', 'PingFangSC', sans-serif;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+
+/* 必要布局样式css */
+.map-content {
+    padding: 30px 0;
+}
+
+.map-module {
+    width: 1200px !important;
+    margin: 0 auto;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.map-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+.map-branch .map-title {
+    margin: 20px 0 0;
+    z-index: 1;
+}
+
+.map-title:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid;
+    border-color: #20B09F transparent transparent;
+}
+
+.map-title:after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 3px;
+    background-color: #20B09F;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map-content-info {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.branch-map-l {
+    width: 849px;
+    height: 575px;
+    position: relative;
+}
+/*--------------------------------地图背景--*/
+.map-content-box {
+    width: 100%;
+    height: 100%;
+    background: url("../img/dt/dt.png") no-repeat center;
+    position: relative;
+}
+
+.map-dot {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.beijing {
+    left: 585px;
+    top: 220px;
+}
+
+.tianjin {
+    left: 604px;
+    top: 234px;
+}
+
+.hebei {
+    left: 575px;
+    top: 254px;
+}
+
+.shanxi {
+    left: 540px;
+    top: 276px;
+}
+
+.liaoning {
+    left: 660px;
+    top: 196px;
+}
+
+.jilin {
+    left: 696px;
+    top: 167px;
+}
+
+.heilongjiang {
+    left: 676px;
+    top: 106px;
+}
+
+.shanghai {
+    left: 668px;
+    top: 341px;
+}
+
+.jiangsu {
+    left: 646px;
+    top: 316px;
+}
+
+.zhejiang {
+    left: 655px;
+    top: 379px;
+}
+
+.anhui {
+    left: 605px;
+    top: 334px;
+}
+
+.fujian {
+    left: 625px;
+    top: 428px;
+}
+
+.jiangxi {
+    left: 595px;
+    top: 402px;
+}
+
+.shandong {
+    left: 610px;
+    top: 284px;
+}
+
+.henan {
+    left: 562px;
+    top: 316px;
+}
+
+.hubei {
+    left: 555px;
+    top: 359px;
+}
+
+.hunan {
+    left: 545px;
+    top: 409px;
+}
+
+.guangdong {
+    left: 575px;
+    top: 466px;
+}
+
+.guangxi {
+    left: 506px;
+    top: 461px;
+}
+
+.chongqing {
+    left: 495px;
+    top: 364px;
+}
+
+.sichuan {
+    left: 425px;
+    top: 354px;
+}
+
+.guizhou {
+    left: 484px;
+    top: 424px;
+}
+
+.yunnan {
+    left: 405px;
+    top: 462px;
+}
+
+.shanxi1 {
+    left: 502px;
+    top: 312px;
+}
+
+.map-dot:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    background-color: #01B7BD;
+    border-radius: 50%;
+}
+map-dot
+.map-dot.beijing:after {
+    width: 13px;
+    height: 12px;
+    border-radius: 0;
+    background: url("../img/地图/icon-star.png") no-repeat center;
+}
+
+.branch-map-data {
+    position: absolute;
+    box-sizing: border-box;
+    width: 430px;
+    border: 1px solid #01B7BD;
+    box-shadow: 0 0 2px 2px #e9e9e9;
+    background-color: #fff;
+    padding: 10px 30px;
+    z-index: 1;
+    display: none;
+}
+
+.branch-map-data-title {
+    border-bottom: 1px solid #eee;
+}
+
+.branch-map-data-title p {
+    font-size: 18px;
+    color: #333;
+    line-height: 28px;
+}
+
+.branch-map-data-info {
+    max-height: 236px;
+    overflow-y: auto;
+}
+
+.data-branch {
+    border-bottom: 1px dashed #eee;
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+
+.data-branch:last-child {
+    border: none;
+}
+
+a, button, input, textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.data-branch .data-name {
+    font-size: 14px;
+    color: #666;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.data-branch p {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+
+.data-branch p {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+
+.branch-map-data:before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    border-color: transparent #01B7BD transparent transparent;
+}
+
+.branch-map-data:after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.map-dot.cur:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #01B7BD;
+    animation: dot 4s infinite;
+}
+
+@keyframes dot {
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.5);
+        opacity: .1;
+    }
+}
