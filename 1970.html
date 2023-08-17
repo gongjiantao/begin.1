@@ -1,0 +1,828 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>1970</title>
+  <meta charset="UTF-8">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <meta content="" name="keywords">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/swiper-4.5.1.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/service.css">
+  <link rel="stylesheet" type="text/css" href="static/css/idea.css">
+  <link rel="stylesheet" type="text/css" href="static/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <script src="static/js/jquery-1.8.3.min.js"></script>
+  <script src="static/js/idea.js"></script>
+  <link rel="stylesheet" href="190.tu/css/style.css">
+<!--星球-->
+  <link rel="stylesheet" href="190.tu/css/base.css" />
+  <link rel="stylesheet" href="190.tu/css/zhengfu.css"/>
+  <link rel="shortcut icon" href="img/homimg/01699f56434ffe6ac7259e0fe866bf.png">
+<!--轮播图-->
+  <link type="text/css" rel="stylesheet" href="css/css/style.css">
+  <script type="text/javascript" src="css/js/swiper.min.js"></script>
+<!--模型-->
+  <link rel="stylesheet" href="190.tu/mx/css/style.css">
+  <link href="plugin/css/bootstrap.min.css" rel="stylesheet">
+<!--搜索-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<style>
+/*视频*/
+.zt{
+  display: flex; justify-content:center; align-items: center;
+  color: #32333b;
+  font-size: 23px;
+  width: 50%;
+}
+/*页脚*/
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+.clearfix:after {content: ".";display: block;height: 0;visibility: hidden;clear: both;}
+.w1100 {width: 1100px;margin: 0 auto;}
+.fl {float: left;}
+.lul{list-style: none;}
+/*注册*/
+.register-bottom { padding: 50px 0 45px; text-align: center; background: #488aff url(../images/register-tip.png) no-repeat center -206px;}
+.register-bottom .title { line-height: 40px; color: #fff;}
+.register-bottom form { width: 454px; margin: 20px auto 0;}
+.register-bottom form .register-phone { width: 290px; height: 46px; padding: 0 15px; font-size: 14px; background: #fff; border: 1px solid #fff; border-radius: 4px 0 0 4px;}
+.register-bottom .btn { display: block; width: 130px; height: 46px; padding: 0; font-size: 16px; line-height: 46px; color: #fff;  background: #488aff; border: 1px solid #fff; border-radius: 0 4px 4px 0; transition: all .3s;}
+.register-bottom .btn:hover { color: #fff; background: #407fff;}
+/*消息*/
+.validInfo{background-color: rgba(0,0,0,.6);width: 190px;height: 48px;line-height: 48px;text-align: center;color: #fff;border-radius: 2px;position: absolute;left: 50%;transform: translateX(-50%);top: 110px;font-size: 14px;display: none;} 
+/*底部*/
+.site-footer { font-size: 14px; line-height: 1.8; color: #a8aaba; background: #32333b;}
+.site-footer a { color: #a8aaba;}
+.site-footer a:hover { color: #f44 !important;}
+.site-footer .footer-article { padding: 30px 0 20px; overflow: hidden;}
+.site-footer .contact { float: left; width: 280px;}
+.site-footer .contact dt { width: 90px;}
+.site-footer .contact .iconfont { width: 66px;height: 66px; display: block;float: left;background: url(../images/kefu.png) center center no-repeat;background-size: 55px;}
+.site-footer .contact .text { font-size: 14px; line-height: 30px; color: #fff;}
+.site-footer .contact .tel { padding: 3px 0 15px; font-size: 20px; color: #fff;}
+.site-footer .contact a { display: block; width: 90px; font-size: 14px; line-height: 30px; color: #9b9ea0; text-align: center; border: 1px solid #9b9ea0; border-radius: 4px;}
+.site-footer .contact a:hover { color: #fff !important;}
+.site-footer .col-article { float: left; width: 171px;}
+.site-footer .col-article dt { margin-bottom: 15px; font-size: 16px; font-weight: normal; color: #d7d8d9;}
+.site-footer .col-article dd { margin-bottom: 8px; overflow: hidden;}
+.site-footer .col-article dd a { font-size: 12px; color: #9b9ea0; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.site-footer .wx { float: left; width: 135px; margin-right: 0;}
+.site-footer .wx dt { margin-bottom: 15px; font-size: 16px; font-weight: normal; color: #d7d8d9;}
+.site-footer .wx dd { margin-bottom: 15px;}
+.site-footer .wx dd img { display: block; width: 110px; height: 110px; margin: 5px 0; border-radius: 2px;}
+.site-footer .wx dd.other { margin-bottom: 0; line-height: 18px;}
+.site-footer .wx dd.other span { display: block; font-size: 12px;}
+.site-footer .wx dd.other a { display: inline-block; margin-right: 5px; font-size: 12px; line-height: 18px; vertical-align: top;}
+.footer-links { padding: 10px 0; border-top: 1px solid #41424c; border-bottom: 1px solid #41424c;}
+.footer-links p { font-size: 14px; color: #a8aaba;}
+.footer-links a { margin-right: 20px; font-size: 12px; color: #a8aaba;}
+.footer-info .info-text { padding: 20px 0; font-size: 12px; text-align: center;}
+.footer-info .info-text .nav-bottom { padding: 20px 0 5px; font-size: 14px; color: #ccc; text-align: center;}
+.footer-info .info-text .nav-bottom a { padding: 0 8px; color: #9b9ea0;}
+.footer-info .info-text .copyright { padding-top: 5px;}
+.footer-info .info-text em { padding: 0 8px;}
+  body,html
+{
+	height: 100%;
+}
+.content
+{
+	width: 100%;
+	height: 100%;
+	margin: 10px auto;
+}
+@media screen and (min-width: 980px)  {
+  .content {
+	width: 70%;
+  }
+}		
+.mygallery
+{
+	margin: 25px 0;
+}
+/*五个目标*/
+.whGe{
+  font-size: 19px;
+  color: aliceblue;
+}
+/*背景****************************************/
+  .jk{
+    background-image: url(190.tu/img/bj/s/-1.png);
+    background-size: 100%;/*自由缩放*/
+  }
+  /*字体***************************************************/
+  .zhiTi{
+    font-size: 20px;
+  }
+  /*历程样式********************************************/
+  a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+  }
+  a:hover{
+    text-decoration: none;
+    color: aliceblue;
+  }
+.Clj{
+  color: #c8d8f4;
+}
+</style>
+  </head>
+<body class="jk">
+<!--导航栏------------------------------------------------------------------------------------------------------------------------>
+<header>
+  <div class="headLogo"> <a href=""> <img class="headLogo_w" src="img/homimg/676607.png" alt="(自适应手机端)大气网络公司网站模板"> <img class="headLogo_r" src="img/homimg/676607.png" alt="(自适应手机端)大气网络公司网站模板"> </a> </div>
+  <div class="headRig"> <a cursor-text="" href="index.html">首页</a> <a cursor-text="" href="1970.html">1970</a> <a cursor-text="" href="kp.html">科普与人物</a> <a cursor-text="" href="hsjy.html">红色记忆</a> <a cursor-text="" href="k4555.html">联系</a> 
+    <div class="headBg_font"> <a class="d_a"><img src="static/picture/s_tel.png">19123910193</a> </div>
+    <div class="headBg">
+      <div class="headBg_bg"></div>
+      <div class="headBg_menu"> </div>
+    </div>
+  </div>
+</header>
+<div class="headBg_cursor"></div>
+<div id="main_nav">
+  <div class="nav_bg"></div>
+  <div class="nav_centerLine"></div>
+  <div class="left">
+    <ul class="main_nav_ul">
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="index.html">首页</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="1970.html">1970</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="kp.html">科普与人物</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="hsjy.html">红色记忆</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="k4555.html">联系</a></li>
+      
+    </ul>
+  </div>
+  <div class="right">
+    <div class="inner" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div class="nav_ifm">
+        <ul>
+          <li> <a href="javascript:void(0)"><img src="static/picture/hx4_03.png"></a>
+            <div class="nav_ifm_list">
+              <p>重庆市天德湖</p>
+            </div>
+          </li>
+          <li> <a href="javascript:void(0)"><img src="static/picture/hx3_03.png"></a>
+            <div class="nav_ifm_list"><span>12小时在线等待</span>
+              <p>19123910193(龚三)</p>
+            </div>
+          </li>
+          <li> <a target="_blank" href="tencent://message/?uin=88888888&Site=www.17sucai.com&Menu=yes"><img src="static/picture/hx1_03.png"></a>
+            <div class="nav_ifm_list"><span>QQ在线咨询</span>
+              <p>点击图标，与销售顾问进行在线沟通</p>
+            </div>
+          </li>
+          <li> <a href="javascript:void(0)"> <img src="static/picture/hx2_03.png" alt=""> </a>
+            <div class="nav_ifm_list"> <span>微信扫一扫<br>
+              </span>
+              <div class="nav_ewm"> <img src="img/homimg/888119b0c2e40b6d95800e0b70c4410.jpg"> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--/导航栏------------------------------------------------------------------------------------------------------------------------>
+<div class="container-fluid">
+<!--文字-->
+<div class="row" style="margin-top: 250px;">
+  <div class="col-lg-12">
+    <ul style="color: aliceblue;">
+      <li style="font-size: 50px;">航天历程</li>
+    </ul>
+  </div> 
+</div> 
+
+<!--历程-------------------------------------------------------------------------------------------->
+   <div class="row" style="margin-top: 20px; padding-left: 10px;">
+    <div class="col-lg-12">
+      <ul style="color: rgb(255, 255, 255);">
+        <li><a target="_blank" href="190.tu/lczlj/demo.html" class="Clj">1970年,我国第一颗人造地球卫星东方红一号乘长征一号运载火箭飞向太空, 人们或趴在窗前，聆听来自宇宙的那曲《东方红》。 </a></li>
+        <li><a target="_blank"  target="_blank"  href="190.tu/lczlj/demo.html" class="Clj">1975年,中国发射了第一颗返回式人造卫星</a></li>
+        <li><a target="_blank" href="190.tu/lczlj/demo.html" class="Clj">1981年,中国首次实现发射“一箭三星</a></li>
+        <li><a target="_blank" href="190.tu/lczlj/demo.html"class="Clj">1988年,中国发射第一颗极轨气象卫星“风云一号”</a></li>
+        <li><a target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2003年,杨利伟乘“神舟五号”完成了中国首次载人航天飞行</a></li>
+        <li><a target="_blank"  href="190.tu/lczlj/demo.html" class="Clj">2007年,“嫦娥一号”成功实现绕月探测</a></li>
+        <li><a  target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2008年,航天员翟志刚完成了中国第一次空间出舱活动</a></li>
+        <li><a target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2010年,“嫦娥二号”发射成功，后续实现详勘落月地点,开展拉格朗日L2点探测和图塔蒂斯小行星探测</a></li>
+        <li><a target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2012年,“神舟九号”实现中国首次手控空间交会对接</a></li>
+        <li><a  target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2013年,“嫦娥三号”着陆月球，实现中国首次地外天体软着陆</a></li>
+        <li><a  target="_blank" href="190.tu/lczlj/demo.html" class="Clj">2016年,“天宫二号”发射升空，成为中国首个真正意义上的空间实验室</a></li>
+        <li><a  target="_blank" href="190.tu/lczlj/demo.html"  class="Clj">2017年,中国首艘货运飞船“天舟一号”升空，并实现与“天宫二号”自动交会对接</a></li>
+        <li><a target="_blank"  href="190.tu/lczlj/demo.html"  class="Clj">2018年,航天科技集团运载火箭发射次数达37次,位居世界第一</a></li>
+        <li><a  target="_blank" href="190.tu/lczlj/demo.html" class="Clj">2019年1月,“嫦娥四号”实现了人类探测器首次月球背面软着陆</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+<!--星球---------------------------------------------------------------------------------------------->
+<div id="content" style="margin-top: 300px;">
+  <div class="inner pr">
+      <div class="con_bg ">
+          <div class="section3">
+              <div class="u_fr">
+                  <div class="ui_base u_p3d" onclick="lj()">
+                      <div class="ball_c"></div>
+                      <div class="base u_p3d">
+                          <div class="ball_base u_p3d ball_1">
+                              <div class="ball">
+                                  <img src="190.tu/img/xq/dq.png" alt="">
+                              </div>
+                          </div>
+                          <div class="ball_base u_p3d ball_2">
+                              <div class="ball">
+                                <img src="190.tu/img/xq/hwx.png" alt="">
+                              </div>
+                          </div>
+                          <div class="ball_base u_p3d ball_3">
+                              <div class="ball">
+                                <img src="190.tu/img/xq/hx.png" alt="">
+                              </div>
+                          </div>
+                          <div class="ball_base u_p3d ball_4">
+                              <div class="ball">
+                                <img src="190.tu/img/xq/tx.png" alt="">
+                              </div>
+                          </div>
+                          <div class="ball_base u_p3d ball_5">
+                              <div class="ball">
+                                <img src="190.tu/img/xq/mx.png" alt="">
+                              </div>
+                          </div>
+                          <div class="ball_base u_p3d ball_6">
+                              <div class="ball">
+                                <img src="190.tu/img/xq/sx.png" alt="">
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--星球框架结束-->
+<div class="row">
+  <div class="col-lg-12"style="margin-top: 200px;">
+    <ul>
+      <li  style="font-size: 40px; color: aliceblue; display: flex; justify-content:center; align-items: center;"><img src="190.tu/img/tub/tw.png " width="100px" height="50px">
+        &nbsp;
+        视频.图文
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 50px; border: 1px solid rgb(255, 255, 255); ">
+  <div class="col-lg-6" style="font-size: 32px; color: aliceblue; display: flex; justify-content:center; align-items: center;">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video muted autoplay width="320" height="240" controls="controls"> 
+        <source src="http://www.cnsa.gov.cn/video/flsk.mp4"  type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video muted autoplay width="320" height="240" controls="controls"> 
+        <source src="http://www.cnsa.gov.cn/video/2023htr.mp4"  type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col-lg-6 zt" style="color: hsl(0, 0%, 100%);">一箭14星,如何实现星舰分离</div>
+  <div class="col-lg-6 zt" style="color: #ffffff;">2023年“中国航天日”主题宣传片预告片</div>
+</div>
+
+
+<div class="row" style=" border: 1px solid rgb(255, 255, 255); margin-top: 30px; ">
+
+  <div class="col-lg-6">
+   <div class="embed-responsive embed-responsive-16by9">
+     <video muted autoplay width="320" height="240" controls="controls"> 
+       <source src="http://www.cnsa.gov.cn/video/2021/gold.mp4"  type="video/mp4">
+     </video>
+   </div>
+ </div>
+ <div class="col-lg-6" style="font-size: 35px; color: aliceblue; display: flex; justify-content:center; align-items: center;">
+  <div class="embed-responsive embed-responsive-16by9">
+    <video muted autoplay width="320" height="240" controls="controls"> 
+      <source src="http://www.cnsa.gov.cn/video/2021/2021cnsa_20211013.mp4"  type="video/mp4">
+    </video>
+  </div>
+ </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-6 zt" style="color: hsl(0, 0%, 100%);">中国首次火星探测任务成功金银纪念币发布</div>
+  <div class="col-lg-6 zt" style="color: #ffffff;">开放合作的中国航天</div>
+</div>
+
+
+<div class="row" style="  border: 1px solid rgb(255, 255, 255); margin-top: 30px; ">
+  <div class="col-lg-6" style="font-size: 30px; color: aliceblue; display: flex; justify-content:center; align-items: center;">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video muted autoplay width="320" height="240" controls="controls"> 
+        <source src="http://www.cnsa.gov.cn/video/ce5/ce5-2.mp4"  type="video/mp4">
+      </video>
+    </div>  </div>
+   <div class="col-lg-6">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video muted autoplay width="320" height="240" controls="controls"> 
+        <source src="http://www.cnsa.gov.cn/video/ce5/lyxj.mp4"  type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-lg-6 zt" style="color: hsl(0, 0%, 100%);">嫦娥五号成功发射 升空瞬间画面</div>
+  <div class="col-lg-6 zt" style="color: #ffffff;">沉嫦娥五号着陆器和上升器组合体动力下降过程降落相机影像</div>
+</div>
+
+
+
+
+  
+
+<!--孩子们的世界---------------------------------------------------------------------------------------------->
+
+<div class="banner-box" style="margin-top: 180px;">
+  <div class="banner-top"></div>
+  <div class="banner-title">
+      <h1 style="color: #ffffff;">孩子们的世界</h1>
+  </div>
+  <div class="banner-text">
+      <p style="color: #ffffff;">别具一格的不仅是风景</p>
+  </div>
+  <div class="banner-top-one"></div>
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-center none-effect">
+              <a href="javascript:;">
+                  <img src="img/sy/etzp/DM_20230415203136_003.jpg" about="" title="">
+              </a>
+          </div>
+          <div class="swiper-slide">
+              <a href="javascript:;">
+                  <img src="img/sy/etzp/DM_20230415203136_008.jpg" about="" title="">
+              </a>
+          </div>
+          <div class="swiper-slide">
+              <a href="javascript:;">
+                  <img src="img/sy/etzp/DM_20230415203136_009.jpg" about="" title="">
+              </a>
+          </div>
+    
+          <div class="swiper-slide">
+              <a href="javascript:;">
+                  <img src="img/sy/etzp/DM_20230415203136_011 (1).jpg" about="" title="">
+              </a>
+          </div>
+          <div class="swiper-slide">
+              <a href="javascript:;">
+                  <img src="img/sy/etzp/DM_20230415203136_013.jpg" about="" title="">
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<!--孩子们的世界---------------------------------------------------------------------------------------------->
+
+
+<!--五个首次---------------------------------------------------------------------------------------------->
+<div class="row" style="padding-top: 250px;">
+  <div class="col-lg-4" style="height: 250px;">
+    <ul>
+      <li style="font-size: 35px; color: aliceblue; padding-top: 220px; ">
+      <img src="190.tu/img/tub/2e99b64a_E426311_910276d1.png" width="50px" height="50px">&nbsp;发射成功！五个首次
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-8">
+  <div class="row">
+    <div class="col-lg-12 whGe" >
+<ul>
+
+  <li>一、首次实施载人飞船自主快速交会对接。神舟十二号载人飞船将首次实施载人自主快速对接,在空间站不断调整姿态的配合下,
+    神舟十二号载人飞船最快能实现发射后6.5小时与空间站对接。
+  </li>
+  <br />
+    <li>二、首次实施绕飞空间站并与空间站径向交会。在此次任务中，神舟十二号载人飞船的交会能力得到加强，具有更复杂的交会对接飞行模式，
+      具备与空间站进行前向、后向、径向对接口对接和分离的功能，并将在本次任务中首次开展绕飞和径向交会对接试验。
+    </li>
+    <br />
+
+      <li>三、首次实现长期在轨停靠。神舟十二号载人飞船将实现在轨停靠3个月。据介绍,为适应空间站复杂构型和姿态带来的复杂外热流条件，
+        神舟团队对返回舱、推进发动机和贮箱等热控方案，以及船站并网供电方案进行了专项设计，使飞船具备了供电、热环境保障的适应性配套条件。
+      </li>
+<br />
+      <li>四、首次具备从不同高度轨道返回东风着陆场的能力。在神舟十二号之前，载人飞船都从固定的轨道返回地球，空间站任务中空间站为了节省推进剂的消耗，轨道位置会随着不同时间
+        节点而进行相应的调整。为满足长期停靠的要求，神舟团队为此对返回轨道重新进行了适应性的设计，使载人飞船返回高度从固定值调整为相对范围，并改进返回的算法，提高载人飞船
+        返回适应性和可靠性。
+      </li>
+      <br />
+
+      <li>五、首次具备天地结合多重保证的应急救援能力。为了保证天上、地上都具有保护航天员生命、在紧急条件下接回航天员的能力，神舟团队开创了天地结合的应急救援任务模式,
+        即携带两艘飞船进场，由一艘船作为发射船的备份，作为遇到突发情况时航天员的生命救援之舟。具体来说，飞船团队采用“滚动待命”策略，在前一发载人飞船发射时，后一发载人
+        飞船在发射场待命,并具备8.5天应急发射能力以实现太空救援的能力。</li>
+</ul>
+    </div>
+  </div>
+  </div>
+</div>
+<!--五个首次---------------------------------------------------------------------------------------------->
+
+</div>
+</div>
+
+
+
+
+
+<div class="site-footer">
+
+  <div class="footer-related">
+
+      <div class="footer-article w1100">
+          <dl class="contact clearfix">
+              <dt class="fl">
+                  <i class="iconfont"></i>
+              </dt>
+              <dd class="fl">
+                  <p class="text">意见反馈</p>
+                  <p class="tel">19123910193</p>
+                  <a href="" >在线咨询</a>
+              </dd>
+          </dl>
+
+          <dl class="col-article">
+              <dt>机构简介</dt>
+
+              <dd>
+                  <a  href="">领导介绍</a>
+              </dd>
+
+              <dd>
+                  <a  href="">机构职能</a>
+              </dd>
+
+              <dd>
+                  <a  href="">机构组成</a>
+              </dd>
+
+              <dd>
+                  <a  href="">国际化合作协调委员会</a>
+              </dd>
+
+      <dd>
+                  <a  href="">视频点播</a>
+              </dd>
+      <dd>
+                  <a  href="">专题专栏</a>
+              </dd>
+
+          </dl>
+
+          <dl class="col-article">
+              <dt>信息发布</dt>
+
+              <dd>
+                  <a  href="">药物动态</a>
+              </dd>
+
+              <dd>
+                  <a  href="">政策公告</a>
+              </dd>
+
+              <dd>
+                  <a  href="">国际合作</a>
+              </dd>
+
+              <dd>
+                  <a  href="">国家航天</a>
+              </dd>
+
+              <dd>
+                  <a  href="">图解航天</a>
+              </dd>
+
+              <dd>
+                  <a  href="">精彩图集</a>
+              </dd>
+
+          </dl>
+
+          <dl class="col-article">
+              <dt>中国航天</dt>
+
+              <dd>
+                  <a  href="">航天白皮书</a>
+              </dd>
+
+              <dd>
+                  <a  href="">重大任务</a>
+              </dd>
+
+              <dd>
+                  <a  href="">宇航产品</a>
+              </dd>
+
+              <dd>
+                  <a  href="">空间科学</a>
+              </dd>
+
+              <dd>
+                  <a  href="">空间应用</a>
+              </dd>
+
+              <dd>
+                  <a  href="">国际合作</a>
+              </dd>
+
+          </dl>
+
+          <!--关于我们-->
+          <dl class="col-article">
+              <dt>互动交流</dt>
+
+              <dd>
+                  <a href="">访谈直播</a>
+              </dd>
+
+              <dd>
+                  <a href="">意见征集</a>
+              </dd>
+
+              <dd>
+                  <a href="">资讯建议</a>
+              </dd>
+
+              
+
+          </dl>
+          <dl class="wx">
+              <dt>问天项目组</dt>
+
+              <dd>
+                  <img src="img/homimg/888119b0c2e40b6d95800e0b70c4410.jpg">
+              </dd>
+
+              <dd class="other">
+                  <span>投诉建议联系：</span>
+                  <a href="" >V:T46645426826</a>
+                  <a href="" >V:G46645426826</a>
+                  <a href="" >Q:3092976135</a>
+                  
+              </dd>
+          </dl>
+      </div>
+
+      <div class="footer-links w1100">
+          <p>借鉴网站：</p>
+          <div class="clearfix">
+
+              <a href="http://www.gov.cn/" target="_blank">中国国家航天局</a>
+
+              <a href="https://www.cnsa.gov.cn/n6758823/n6758844/n6760087/index.html" target="_blank">国家航天局网站-逐梦航天 合作共赢</a>
+
+              <a href="http://clep.cnsa.gov.cn" target="_blank">中国探月与深空探测网</a>
+
+              <a href="http://www.inlinkall.com/index.php">高分辨率对地观测系统</a>
+
+              <a href="http://www.cnsa.gov.cn/n6758824/n6759009/n6759042/index.html" target="_blank">中国载人航天工程网</a>
+
+              <a href="http://www.beidou.gov.cn/" target="_blank">北斗网</a>
+
+              <a href="http://www.spacechina.com/n25/index.html" target="_blank">中国航天科技集团有限公司</a>
+
+          
+          </div>
+      </div>
+
+      <div class="footer-info w1100">
+          <div class="info-text w1100">
+              <p class="copyright">
+              <em></em>
+                  <a href="#" >渝ICP备xxxxxxxx号</a>
+              </p>
+              <p class="qualified">
+
+              </p>
+          </div>
+      </div>
+
+  </div>
+</div>
+<div class="validInfo"></div>
+
+
+
+
+
+
+
+   <!--框架结束-->
+</div>
+<!--模型-->
+<script  src="190.tu/mx/js/script.js"></script>
+<!--星球-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js'></script>
+    <script  src="js/script（2）.js"></script>
+    
+    
+
+    <script type="text/javascript" src="static/js/wow.min.js"></script> 
+<script type="text/javascript">
+	var wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: true,
+		live: true
+	});
+	wow.init();
+</script>
+</body>
+<script src="static/js/swiper-4.5.1.min.js"></script>
+<script>
+	$(window).ready(function () {
+		$(".circle__all>.line>.line").text("0" + $(".banDemo").find(".swiper-slide").length)
+		var swiper = new Swiper('.banDemo .swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			speed: 1000, //匀速时间
+			
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				disabledClass: 'my-button-disabled',
+			},
+		});
+
+	})
+
+  window.onload = function() {
+      var swiper = new Swiper('.swiper-container',{
+          autoplay: false, 
+          speed: 500,     
+          autoplayDisableOnInteraction: true,
+          loop: true,
+          centeredSlides: true,
+          slidesPerView: 3, 
+          pagination: '.swiper-pagination',
+          paginationClickable: true,
+          prevButton: '.swiper-button-prev',
+          nextButton: '.swiper-button-next',
+          onInit: function(swiper) {
+              swiper.slides[3].className = "swiper-slide swiper-slide-active"; 
+          },
+          breakpoints: {
+              100: {
+                  slidesPerView: 0,
+              }
+          }
+      });
+  }
+  const pages = document.querySelectorAll(".page");
+    let currentPageIndex = 0;
+
+    // 初始化，显示第一页
+    pages[currentPageIndex].classList.add("visible");
+
+    // 自动滚动
+    setInterval(function() {
+      showPage(currentPageIndex + 1);
+    }, 30000); // 每隔3秒切换一页
+
+    // 切换页面
+    function showPage(index) {
+      pages[currentPageIndex].classList.remove("visible");
+      currentPageIndex = index % pages.length;
+      pages[currentPageIndex].classList.add("visible");
+      updateCircles();
+    }
+
+    // 更新圆圈的状态
+    function updateCircles() {
+      const circles = document.querySelectorAll(".circle");
+      circles.forEach((circle, index) => {
+        if (index === currentPageIndex) {
+          circle.style.backgroundColor = "blue";
+        } else {
+          circle.style.backgroundColor = "gray";
+        }
+      });
+    }
+
+    // 初始状态更新圆圈
+    updateCircles();
+</script>
+<script>
+  function lj(){
+    window.open('190.tu/parallax/index.html')
+  }
+	$(window).ready(function () {
+		function browserRedirect() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+				// 手机端 
+				$(window).scroll(function () {
+					var top = $(window).scrollTop();
+					if (top > 10) {
+						$('header').addClass("white").addClass("font");
+					} else {
+						$('header').removeClass("font").removeClass("white");
+					}
+				})
+			} else {
+				// PC端
+				var isMove = false;
+				var scrollFunc = function (e) {
+					if (isMove) return false;
+					var h = $(window).scrollTop(),
+						oaboutT = $(window).height(),
+						e = e || window.event,
+						isScroll = e.wheelDelta ? e.wheelDelta : -e.detail;
+
+					if (isScroll < 0 && h < oaboutT) {
+						isMove = true;
+						$('body,html').animate({
+							scrollTop: oaboutT
+						}, 800, function () {
+							isMove = false;
+						});
+						$("header").addClass("font").addClass("white")
+
+					} else
+					if (isScroll > 0 && h <= oaboutT) {
+						isMove = true;
+						$('body,html').animate({
+							scrollTop: 0
+						}, 800, function () {
+							isMove = false;
+							$("header").removeClass("white").removeClass("font")
+						});
+						$("header").removeClass("white").removeClass("font")
+					}
+				};
+				//给页面绑定滑轮滚动事件
+				if (document.addEventListener) {
+					document.addEventListener('DOMMouseScroll', scrollFunc, false);
+				}
+				//滚动滑轮触发scrollFunc方法
+				window.onmousewheel = document.onmousewheel = scrollFunc;
+
+				// 2
+				$(window).scroll(function () {
+					$("header").addClass("font").addClass("white")
+					var top = $(window).scrollTop();
+					if (top > $('.item-about').offset().top && top < $('.item-work').offset().top) {
+						// $(".ysUtil").addClass("btm")
+					} else {
+						// $(".ysUtil").removeClass("btm")
+					}
+					if (top < 10) {
+						$("header").removeClass("white").removeClass("font")
+					}
+				})
+			}
+		}
+		browserRedirect();
+	});
+</script>
+</body>
+</html>
