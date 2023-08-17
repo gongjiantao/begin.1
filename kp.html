@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/swiper-4.5.1.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/service.css">
+  <link rel="stylesheet" type="text/css" href="static/css/idea.css">
+  <link rel="stylesheet" type="text/css" href="static/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <script src="static/js/jquery-1.8.3.min.js"></script>
+  <script src="static/js/idea.js"></script>
+
+  <title>科普与人物</title>
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <!--第一人-->
+  <link rel="stylesheet" href="kptu/css/dyr.css">
+  <link rel="stylesheet" href="kptu/xwlj/xw/css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="kptu/xwlj/xw/css/style.css"> <!-- Resource style -->
+
+  <!--头部图标-->
+  <link rel="shortcut icon" href="img/homimg/01699f56434ffe6ac7259e0fe866bf.png">
+
+  <!--第一人-->
+  <link rel="stylesheet" type="text/css" href="kptu/css/styles.css">
+  <script src="kptu/js/jquery-1.8.3.min.js"></script>
+  <script src="kptu/js/banner.js"></script>
+  <!--框架-->
+  <link href="plugin/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /*页脚*/
+@charset "utf-8";
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+.clearfix:after {content: ".";display: block;height: 0;visibility: hidden;clear: both;}
+.w1100 {width: 1100px;margin: 0 auto;}
+.fl {float: left;}
+
+.lul{list-style: none;}
+/*注册*/
+.register-bottom { padding: 50px 0 45px; text-align: center; background: #488aff url(../images/register-tip.png) no-repeat center -206px;}
+.register-bottom .title { line-height: 40px; color: #fff;}
+.register-bottom form { width: 454px; margin: 20px auto 0;}
+.register-bottom form .register-phone { width: 290px; height: 46px; padding: 0 15px; font-size: 14px; background: #fff; border: 1px solid #fff; border-radius: 4px 0 0 4px;}
+.register-bottom .btn { display: block; width: 130px; height: 46px; padding: 0; font-size: 16px; line-height: 46px; color: #fff;  background: #488aff; border: 1px solid #fff; border-radius: 0 4px 4px 0; transition: all .3s;}
+.register-bottom .btn:hover { color: #fff; background: #407fff;}
+/*消息*/
+.validInfo{background-color: rgba(0,0,0,.6);width: 190px;height: 48px;line-height: 48px;text-align: center;color: #fff;border-radius: 2px;position: absolute;left: 50%;transform: translateX(-50%);top: 110px;font-size: 14px;display: none;} 
+/*底部*/
+.site-footer { font-size: 14px; line-height: 1.8; color: #a8aaba; background: #32333b;}
+.site-footer a { color: #a8aaba;}
+.site-footer a:hover { color: #f44 !important;}
+.site-footer .footer-article { padding: 30px 0 20px; overflow: hidden;}
+.site-footer .contact { float: left; width: 280px;}
+.site-footer .contact dt { width: 90px;}
+.site-footer .contact .iconfont { width: 66px;height: 66px; display: block;float: left;background: url(../images/kefu.png) center center no-repeat;background-size: 55px;}
+.site-footer .contact .text { font-size: 14px; line-height: 30px; color: #fff;}
+.site-footer .contact .tel { padding: 3px 0 15px; font-size: 20px; color: #fff;}
+.site-footer .contact a { display: block; width: 90px; font-size: 14px; line-height: 30px; color: #9b9ea0; text-align: center; border: 1px solid #9b9ea0; border-radius: 4px;}
+.site-footer .contact a:hover { color: #fff !important;}
+.site-footer .col-article { float: left; width: 171px;}
+.site-footer .col-article dt { margin-bottom: 15px; font-size: 16px; font-weight: normal; color: #d7d8d9;}
+.site-footer .col-article dd { margin-bottom: 8px; overflow: hidden;}
+.site-footer .col-article dd a { font-size: 12px; color: #9b9ea0; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.site-footer .wx { float: left; width: 135px; margin-right: 0;}
+.site-footer .wx dt { margin-bottom: 15px; font-size: 16px; font-weight: normal; color: #d7d8d9;}
+.site-footer .wx dd { margin-bottom: 15px;}
+.site-footer .wx dd img { display: block; width: 110px; height: 110px; margin: 5px 0; border-radius: 2px;}
+.site-footer .wx dd.other { margin-bottom: 0; line-height: 18px;}
+.site-footer .wx dd.other span { display: block; font-size: 12px;}
+.site-footer .wx dd.other a { display: inline-block; margin-right: 5px; font-size: 12px; line-height: 18px; vertical-align: top;}
+.footer-links { padding: 10px 0; border-top: 1px solid #41424c; border-bottom: 1px solid #41424c;}
+.footer-links p { font-size: 14px; color: #a8aaba;}
+.footer-links a { margin-right: 20px; font-size: 12px; color: #a8aaba;}
+.footer-info .info-text { padding: 20px 0; font-size: 12px; text-align: center;}
+.footer-info .info-text .nav-bottom { padding: 20px 0 5px; font-size: 14px; color: #ccc; text-align: center;}
+.footer-info .info-text .nav-bottom a { padding: 0 8px; color: #9b9ea0;}
+.footer-info .info-text .copyright { padding-top: 5px;}
+.footer-info .info-text em { padding: 0 8px;}
+a{text-decoration: none;}
+  #root {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+.ball-bg {
+  margin: auto;
+  width: 300px;
+  height: 300px; }
+  .ball-bg .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000;
+    animation: fullrotate 10s linear infinite; }
+    .ball-bg .container .point {
+      position: absolute;
+      top: 50%;
+      left: 49%;
+      transition: transform 2s;
+      font-size: 12px; }
+    .ball-bg .container.plan {
+      animation: unset; }
+      .ball-bg .container.plan .point {
+        transition: transform .6s;
+        font-size: 16px;
+        cursor: pointer; }
+        .ball-bg .container.plan .point:hover {
+          border-bottom: 1px solid #808080; }
+    .ball-bg .container.columnar {
+      animation: full-columnar 10s linear infinite; }
+
+@keyframes fullrotate {
+  to {
+    transform: rotateY(360deg) rotateZ(360deg); } }
+
+@keyframes full-columnar {
+  to {
+    transform: rotateY(360deg); } }
+  .Xinxi{
+    color: rgb(46, 48, 50);
+}
+.Xinxi:hover{
+    color: rgb(116, 42, 177);
+}
+body{
+  background-color: rgb(221, 244, 236);
+}
+.a1{display: flex;align-items: center;justify-content: center;}
+      .a2{margin: auto;}
+      .htzs{border-radius: 10px;}
+      .htzs:hover{-webkit-box-shadow: #857b7b 0px 0px 10px;-moz-box-shadow: #635757 0px 0px 10px;box-shadow: #877474 0px 0px 10px;}
+</style>
+
+  </head>
+<body>
+<!--导航栏------------------------------------------------------------------------------------------------------------------------>
+<header>
+  <div class="headLogo"> <a href=""> <img class="headLogo_w" src="img/homimg/676607.png" alt="(自适应手机端)大气网络公司网站模板"> <img class="headLogo_r" src="img/homimg/676607.png" alt="(自适应手机端)大气网络公司网站模板"> </a> </div>
+  <div class="headRig"> <a cursor-text="" href="index.html">首页</a> <a cursor-text="" href="1970.html">1970</a> <a cursor-text="" href="kp.html">科普与人物</a> <a cursor-text="" href="hsjy.html">红色记忆</a> <a cursor-text="" href="k4555.html">联系</a> 
+    <div class="headBg_font"> <a class="d_a"><img src="static/picture/s_tel.png">19123910193</a> </div>
+    <div class="headBg">
+      <div class="headBg_bg"></div>
+      <div class="headBg_menu"> </div>
+    </div>
+  </div>
+</header>
+<div class="headBg_cursor"></div>
+<div id="main_nav">
+  <div class="nav_bg"></div>
+  <div class="nav_centerLine"></div>
+  <div class="left">
+    <ul class="main_nav_ul">
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="index.html">首页</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="1970.html">1970</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="kp.html">科普与人物</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="hsjy.html">红色记忆</a></li>
+      
+      <li style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><a href="k4555.html">联系</a></li>
+      
+    </ul>
+  </div>
+  <div class="right">
+    <div class="inner" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <div class="nav_ifm">
+        <ul>
+          <li> <a href="javascript:void(0)"><img src="static/picture/hx4_03.png"></a>
+            <div class="nav_ifm_list">
+              <p>重庆市天德湖</p>
+            </div>
+          </li>
+          <li> <a href="javascript:void(0)"><img src="static/picture/hx3_03.png"></a>
+            <div class="nav_ifm_list"><span>12小时在线等待</span>
+              <p>19123910193(龚三)</p>
+            </div>
+          </li>
+          <li> <a target="_blank" href="tencent://message/?uin=88888888&Site=www.17sucai.com&Menu=yes"><img src="static/picture/hx1_03.png"></a>
+            <div class="nav_ifm_list"><span>QQ在线咨询</span>
+              <p>点击图标，与销售顾问进行在线沟通</p>
+            </div>
+          </li>
+          <li> <a href="javascript:void(0)"> <img src="static/picture/hx2_03.png" alt=""> </a>
+            <div class="nav_ifm_list"> <span>微信扫一扫<br>
+              </span>
+              <div class="nav_ewm"> <img src="img/homimg/888119b0c2e40b6d95800e0b70c4410.jpg"> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--/导航栏------------------------------------------------------------------------------------------------------------------------>
+<div class="container-fluid" style="margin-top: 0px;">
+
+  <div class="row">
+<!--轮播图----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="banner">
+      <div class="b-img">
+        <a href="#" style="background:url(kptu/images/lft/9500.jpg) center no-repeat;"></a>
+        <a href="#" style="background:url(kptu/images/lft/kjz.jpg) center no-repeat;"></a>
+        <a href="#" style="background:url(kptu/images/lft/018b175e611fffa80120a8952de2f4.jpg@1280w_1l_2o_100sh_1750x999.jpg) center no-repeat;"></a>
+      </div>
+      <div class="b-list"></div>
+      <a class="bar-left" href="#"><em></em></a><a class="bar-right" href="#"><em></em></a>
+     </div>
+  </div>
+<dvi class="row">
+  <div class="col-lg-12" style="margin-top: 250px;"><img src="kptu/images/xxfb/tkdyr.png" width="400px" height="200px"></div>
+</dvi>
+<div class="row">
+  <div class="col-lg-12">
+
+      <div class="main-group">
+          <div class="item-group">
+              <div data-show-all='0' class="book">
+                  <div class="book_cover">
+                      <div class="header-image">
+                          <img src="kptu/images/dyr.jpg" alt="">
+                      </div>
+                      <div class="title-wrap">
+                          <h1 class="article-title">尤里·加加林</h1>
+                      </div>
+                      <p class="book_cover-exerpt">
+                          1934年3月9日-1968年3月27日），苏联航天员，苏联英雄，苏联红军上校飞行员，是第一个进入太空的人，也是第一个从太空中看到地球全貌的人
+                          <br><br>
+                      </p>
+                  </div>
+                  <div class="book_content">
+                      <p>加加林身高159厘米，白俄罗斯人，生于苏联斯摩棱斯克州格扎茨克区的克卢希诺镇一个集体农庄庄员家庭 [2] 。1955年从萨拉托夫工业技术学校毕业后参军。
+                          1957年在契卡洛夫第一军事航空飞行员学校结业，成为红旗北方舰队航空兵歼击机飞行员 [31] 。1960年被选为航天员，加入苏联共产党。1961年4月12日
+                          ，加加林身着90千克重的太空服、乘坐重达4.75吨的东方1号宇宙飞船进入太空，成为世界上第一个进入宇宙空间的人。加加林因此立即驰名全球，他荣获列
+                          宁勋章并被授予苏联英雄和苏联航天员称号。1968年3月27日，他因一架双座喷气式飞机坠毁而罹难，年仅34岁。为纪念加加林首次进入太空的壮举，俄罗斯
+                          把每年的4月12日定为宇航节</p>
+                      <p>这个名字对于大部分中国人来说应该并不会觉得陌生。他是世界上第一个进入太空的人。
+                          上世纪50年代，美国和苏联正陷入激烈的太空竞赛。加加林的太空飞行让苏联在载人航天方面击败
+                          了美国人，他持续108分钟的太空之旅也为他自己在全世界各国的历史书中牢牢占据了一席之地。</p>
+                      <p>美国人希望能够在1961年将宇航员送入太空，于是，为了再次击败美国，1961年便成了苏联载人航天工程人员们的奋斗目标和截止日期
+                          。他们迅速开发出“东方”号（Vostok）载人飞船。</p>
+
+                      <p>1961年4月12日，莫斯科时间9：07，“东方1号”飞船发射升空。因为在当时没有任何人知道太空失重环境究竟会对宇航员产生何种影响，因此“东
+                          方1号”飞船上没有安排多少控制功能让加加林来掌控，绝大部分操控要么由程序自动执行，要么由地面远程遥控。但是如果发生紧急情况，地面将
+                          向飞船发送一条紧急指令，将控制权交给加加林，以便后者手动操作飞船应对危险。但在飞船升空之前，苏联的传奇航天总设计师谢尔盖·科罗廖夫
+                          不同意这一规定，在他的要求下，在升空之前，地面就将接管指令交给了加加林。</p>
+
+                      <p>东方1号”飞船内携带了足以满足加加林10天生活所需的物资，但实际上一切都非常顺利。飞船接到指令后开始下降高度，进入地球大气层，加加林感受到8
+                          个G的加速度，但是仍然保持了意识的清醒。</p>
+
+                      <p>安全返回之后，加加林成为了世界级的英雄。他在莫斯科红场上接受成千上万民众的欢呼和祝贺，苏联甚至还安排他到世界各地迅游，以展示苏联的伟大成就。</p>
+
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
+<!--信息发布--------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="row">
+  <div class="col-lg-12" ><img src="img/sy/htzz .png" width="400px" height="200px" ></div>
+</div>
+<div class="row a1 a2" style="margin-top: 90px; width: 1100px;">
+  <div class="col-lg-12">
+<div class="row htzs" style="margin-top: 50px;">
+  <div class="col-lg-6">
+   <img src="img/sy/htzs/ylw.jpeg" width="250px" height="200px">
+  </div>
+  <div class="col-lg-6" > 
+    <h4 style="color: rgb(0, 0, 0); font-size: 30px;">中国进入太空第一人</h4>
+    <p style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杨利伟是中国培养的第一代航天员，是中国进入太空的第一人。其成功完成太空之旅后，
+      中国成为世界上第3个能够独立开展载人航天活动的国家。</p>
+    </div>
+  </div>
+  <div class="row htzs" style="margin-top: 30px;">
+    <div class="col-lg-6">
+     <img src="img/sy/htzs/cwhty.jpg" width="250px" height="200px">
+    </div>
+
+    <div class="col-lg-6" style="padding-left: 0px;" > 
+      <h4 style="color: rgb(0, 0, 0); font-size: 30px;">成为航天员需要分几步？</h4>
+      <p style="font-size: 20px;">1、航天员选拔:初选、复选和定。</p>
+      <p style="font-size: 20px;">2、训练期的航天员选拔</p>
+      <P style="font-size: 20px;">3、飞行乘组的选拔</P>
+      <P style="font-size: 20px;">4、成为航天员</P>
+      </div>
+    </div>
+    <div class="row htzs" style="margin-top: 30px;">
+      <div class="col-lg-6">
+       <img src="img/sy/htzs/fsfs.png" width="250px" height="200px">
+      </div>
+      <div class="col-lg-6" > 
+        <h3 style="color: rgb(0, 0, 0); font-size: 30px;">火箭的发射方式</h3>
+        <p style="font-size: 20px;">目前火箭发射有三种方式：一是地面发射，二是空中发射，三是海上发射。</p>
+        <p style="font-size: 20px;">地面发射场发射：早期，运送有效载荷的火箭都是从地面发射场发射的。地面发射场受地理位置的制约，限制了有效载荷的发射范围，
+          难以满足各种有效载荷的需求，于是出现了从空中发射和从海上平台发射火箭的方式。</p>
+        </div>
+      </div>
+  </div>
+</div>
+<!--中国航天------------------------------------------------------------------------------------------------------------------------------------>
+<div class="row" style="margin-top: 100px;"id="G">
+  <div class="col-lg-2"><img src="kptu/images/xxfb/htcp.png"></div><br />
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+</div>
+<div class="row" style="margin-top: 60px;" id="J" >
+  <div class="col-lg-3"><a href="kptu/cp/zjb/htcp.html"><img src="kptu/images/xxfb/zght/htcp.png"></a></div>
+  <div class="col-lg-3"><a href="kptu/cp/zjb/fccp.html"><img src="kptu/images/xxfb/zght/fccp.png"></a></div>
+  <div class="col-lg-3"><a href="kptu/cp/zjb/wx.html"><img src="kptu/images/xxfb/zght/wxcp.png"></a></div>
+  <div class="col-lg-3"><a href="kptu/cp/zjb/hj.html"><img src="kptu/images/xxfb/zght/hjcp.png"></a></div>
+</div>
+<!--不一样的他们-------------------------------------------------------------------------------------------------------------------------------------->
+<div class="row" style="margin-top: 50px;">
+  <div class="col-lg-2"><img src="kptu/images/xxfb/ww.png"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+</div>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-lg-12" >
+<a  href="kptu/rw/wh/index.html"><img src="kptu/images/jiade.png" style="width: 100%; height: 850px; border-radius: 20px;">
+  </div>
+</div>
+<!--框架结束---------------------------------------------------------------------------------------------->
+</div>
+       <!--图片渐显--> 
+       <div class="site-footer" style="margin-top: 20px;">
+
+        <div class="footer-related">
+    
+            <div class="footer-article w1100">
+                <dl class="contact clearfix">
+                    <dt class="fl">
+                        <i class="iconfont"></i>
+                    </dt>
+                    <dd class="fl">
+                        <p class="text">意见反馈</p>
+                        <p class="tel">19123910193</p>
+                        <a >在线咨询</a>
+                    </dd>
+                </dl>
+    
+                <dl class="col-article">
+                    <dt>机构简介</dt>
+    
+                    <dd>
+                        <a>领导介绍</a>
+                    </dd>
+    
+                    <dd>
+                        <a>机构职能</a>
+                    </dd>
+    
+                    <dd>
+                        <a>机构组成</a>
+                    </dd>
+    
+                    <dd>
+                        <a>国际化合作协调委员会</a>
+                    </dd>
+    
+            <dd>
+                        <a>视频点播</a>
+                    </dd>
+            <dd>
+                        <a>专题专栏</a>
+                    </dd>
+    
+                </dl>
+    
+                <dl class="col-article">
+                    <dt>信息发布</dt>
+    
+                    <dd>
+                        <a>药物动态</a>
+                    </dd>
+    
+                    <dd>
+                        <a >政策公告</a>
+                    </dd>
+    
+                    <dd>
+                        <a >国际合作</a>
+                    </dd>
+    
+                    <dd>
+                        <a >国家航天</a>
+                    </dd>
+    
+                    <dd>
+                        <a >图解航天</a>
+                    </dd>
+    
+                    <dd>
+                        <a >精彩图集</a>
+                    </dd>
+    
+                </dl>
+    
+                <dl class="col-article">
+                    <dt>中国航天</dt>
+    
+                    <dd>
+                        <a  >航天白皮书</a>
+                    </dd>
+    
+                    <dd>
+                        <a >重大任务</a>
+                    </dd>
+    
+                    <dd>
+                        <a >宇航产品</a>
+                    </dd>
+    
+                    <dd>
+                        <a >空间科学</a>
+                    </dd>
+    
+                    <dd>
+                        <a >空间应用</a>
+                    </dd>
+    
+                    <dd>
+                        <a  >国际合作</a>
+                    </dd>
+    
+                </dl>
+    
+                <!--关于我们-->
+                <dl class="col-article">
+                    <dt>互动交流</dt>
+    
+                    <dd>
+                        <a>访谈直播</a>
+                    </dd>
+    
+                    <dd>
+                        <a >意见征集</a>
+                    </dd>
+    
+                    <dd>
+                        <a >资讯建议</a>
+                    </dd>
+    
+                    
+    
+                </dl>
+                <dl class="wx">
+                    <dt>问天项目组</dt>
+    
+                    <dd>
+                        <img src="img/homimg/888119b0c2e40b6d95800e0b70c4410.jpg">
+                    </dd>
+    
+                    <dd class="other">
+                        <span>投诉建议联系：</span>
+                        <a  >V:T46645426826</a>
+                        <a >V:G46645426826</a>
+                        <a >Q:3092976135</a>
+                        
+                    </dd>
+                </dl>
+            </div>
+    
+            <div class="footer-links w1100">
+                <p>借鉴网站：</p>
+                <div class="clearfix">
+    
+                    <a href="http://www.gov.cn/" target="_blank">中国国家航天局</a>
+    
+                    <a href="https://www.cnsa.gov.cn/n6758823/n6758844/n6760087/index.html" target="_blank">国家航天局网站-逐梦航天 合作共赢</a>
+    
+                    <a href="http://clep.cnsa.gov.cn" target="_blank"> 中国探月与深空探测网</a>
+    
+                    <a href="http://www.inlinkall.com/index.php" target="_blank">高分辨率对地观测系统</a>
+    
+                    <a href="http://www.cnsa.gov.cn/n6758824/n6759009/n6759042/index.html" target="_blank">中国载人航天工程网</a>
+    
+                    <a href="http://www.beidou.gov.cn/" target="_blank">北斗网</a>
+    
+                    <a href="http://www.spacechina.com/n25/index.html" target="_blank">中国航天科技集团有限公司</a>
+    
+                
+                </div>
+            </div>
+    
+            <div class="footer-info w1100">
+                <div class="info-text w1100">
+                    <p class="copyright">
+                     <em></em>
+                        <a href="#" >渝ICP备xxxxxxxx号</a>
+                    </p>
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <div class="validInfo"></div>
+    <script type="text/javascript">
+      function sleep (time) {
+      return new Promise((resolve) => setTimeout(resolve, time*1000));
+      }
+      $('.book').on('click', function () {
+        let that = this;
+         (async function() {
+        
+          $(that).toggleClass('zoom-group');
+          
+          if($(that).attr('data-show-all') == 0){
+            $('.book').hide();
+            $(that).attr('data-show-all', 1).show();
+          }else{
+            await sleep(0.6);
+            $('.book').show();
+            $(that).attr('data-show-all', 0);
+          }
+          
+          
+          $('.book').animate({
+                scrollTop: 0
+          }, 500);
+        })();
+        });
+      </script>
+
+
+
+<script type="text/javascript" src="static/js/wow.min.js"></script> 
+<script type="text/javascript">
+	var wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: true,
+		live: true
+	});
+	wow.init();
+</script>
+</body>
+<script src="static/js/swiper-4.5.1.min.js"></script>
+<script>
+	$(window).ready(function () {
+		$(".circle__all>.line>.line").text("0" + $(".banDemo").find(".swiper-slide").length)
+		var swiper = new Swiper('.banDemo .swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			speed: 1000, //匀速时间
+			
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				disabledClass: 'my-button-disabled',
+			},
+		});
+
+	})
+</script>
+<script>
+	$(window).ready(function () {
+		function browserRedirect() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+				// 手机端 
+				$(window).scroll(function () {
+					var top = $(window).scrollTop();
+					if (top > 10) {
+						$('header').addClass("white").addClass("font");
+					} else {
+						$('header').removeClass("font").removeClass("white");
+					}
+				})
+			} else {
+				// PC端
+				var isMove = false;
+				var scrollFunc = function (e) {
+					if (isMove) return false;
+					var h = $(window).scrollTop(),
+						oaboutT = $(window).height(),
+						e = e || window.event,
+						isScroll = e.wheelDelta ? e.wheelDelta : -e.detail;
+
+					if (isScroll < 0 && h < oaboutT) {
+						isMove = true;
+						$('body,html').animate({
+							scrollTop: oaboutT
+						}, 800, function () {
+							isMove = false;
+						});
+						$("header").addClass("font").addClass("white")
+
+					} else
+					if (isScroll > 0 && h <= oaboutT) {
+						isMove = true;
+						$('body,html').animate({
+							scrollTop: 0
+						}, 800, function () {
+							isMove = false;
+							$("header").removeClass("white").removeClass("font")
+						});
+						$("header").removeClass("white").removeClass("font")
+					}
+				};
+				//给页面绑定滑轮滚动事件
+				if (document.addEventListener) {
+					document.addEventListener('DOMMouseScroll', scrollFunc, false);
+				}
+				window.onmousewheel = document.onmousewheel = scrollFunc;
+
+				// 2
+				$(window).scroll(function () {
+					$("header").addClass("font").addClass("white")
+					var top = $(window).scrollTop();
+					if (top > $('.item-about').offset().top && top < $('.item-work').offset().top) {
+					
+					} else {
+					}
+					if (top < 10) {
+						$("header").removeClass("white").removeClass("font")
+					}
+				})
+			}
+		}
+		browserRedirect();
+	});
+</script>
+</body>
+</html>
