@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>错误信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+<body>
+
+
+<div style="margin-left:10%;margin-top:5%;">
+    <div style="margin-bottom:20px;"><img src="/core/template/face02.png" height="120"></div>
+    <div style="font-size:20px;margin-bottom:20px;">您访问的内容不存在，请核对后重试！ <span id="time" style="font-size:18px;"></span></div>
+    <div><span style="font-size:12px;border-top:1px solid #ccc;color:#ccc;padding-top:2px;">
+   		程序版本：3.0.5，
+   		操作系统：Linux，
+   		WEB应用：Apache
+    </span></div>
+</div>
+
+
+
+</body>
+</html>
