@@ -1,0 +1,128 @@
+@media only screen and (max-width: 1199px) {
+  header.init{
+    position: sticky;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .p30{
+    padding: 15px 10px;
+  }
+  .p60{
+    padding: 20px 15px;
+  }
+  .p90{
+    padding: 30px 20px;
+  }
+  .stiky-detail{
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .detaillist, .hide-detail{
+    display: none;
+  }
+  .show-detail{
+    display: block;
+  }
+  .filter-wraper, ul#filter-porto, ul#filterheading{
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+ .p-4-vh{
+  padding-left: 4%;
+  padding-right: 4%;
+ }
+ .rightmenu{
+    height: 0px;
+  }
+  .social-icons-subnav span{
+    display: none;
+  }
+  .whitepage-menu{
+    width: 97%;
+  }
+  .wrap-menu-child, .share{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .search-container{
+    padding: 10% 5%;
+  }
+  .wrap-menu-child{
+    position: relative;
+    height: auto;
+    overflow-y: scroll;
+  }
+  .share_title {
+    top: 32px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  body{
+    line-height: normal;
+  }
+  .p-4-vh{
+    display: block;
+  }
+  #nav-icon{
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 4%;
+  }
+  .p-30{
+    padding: 0px;
+  }
+  .p-60{
+    padding: 0px;
+  }
+  .p-60{
+    padding: 0px;
+  }
+  .slideshow-slide-caption-text{
+    padding: 30vh 4% 0 4%;
+  }
+  .pagination{
+    left: 4%;
+  }
+  .wrap-btn-slider{
+    right: 4%;
+  }
+  footer .left, footer .right{
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  footer .left{
+    padding-top: 2px;
+  }
+  .slideshow-slide-caption-title{
+    font-size: 7vw;
+  }
+  .slideshow-sub-title{
+    font-size: 5vw;
+  }
+  #blog-comment > ul ul{
+  	padding-left: 0px;
+  }
+}
+@media(max-width:414px) {
+ 
+}
+@media(max-width:360px) {
+
+}
+@media(max-width:320px) {
+  .share li{
+    width: 30px;
+    height: 30px;
+    border: 0px;
+  }
+  .share li:first-child{
+    border: 0px;
+  }
+  #menu-block ul li .sharesoc i{
+    font-size: 1rem;
+  }
+}
