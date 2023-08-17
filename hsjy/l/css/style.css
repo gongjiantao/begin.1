@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: calc(0.9vw + 0.9vh + 0.4vmin);
+}
+
+body {
+  background: #f1e4f3;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.details {
+  background: #f1e4f3;
+  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.1);
+  color: #43278c;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  width: 21em;
+}
+
+.preview .details {
+  -webkit-animation: fade 1s ease-in-out;
+          animation: fade 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.entry-header {
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.entry-header h2 {
+  background: #43278c;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  box-shadow: 0.2em 0 0 #43278c, -0.2em 0 0 #43278c;
+  color: #fff;
+  display: inline;
+  margin: 0 0.2em;
+  position: relative;
+  padding: 0 0 0 0.6em;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 1.2em;
+  font-style: italic;
+  padding-left: 2rem;
+}
+
+.preview .desc,
+.preview .extra {
+  display: none;
+}
+
+button {
+  background: #f1e4f3;
+  border: 2px solid #43278c;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  color: #43278c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  padding: 0.4rem 1.4rem;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  transition-duration: 0.2s;
+  transition-property: color;
+  vertical-align: middle;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff599b;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  transition-duration: 0.2s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-timing-function: ease-out;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: #fff;
+}
+
+button:hover:before,
+button:focus:before,
+button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.expanded button {
+  margin: 1em 0;
+  padding: 1em;
+  width: 100%;
+}
+
+.card .desc {
+  padding: 1rem 2rem;
+  order: 99;
+}
+.card .actions {
+  order: 100;
+  padding: 1em 2em 1.5em;
+}
+
+.picture {
+  height: 9em;
+  left: 51%;
+  overflow: hidden;
+  position: absolute;
+  top: 51%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 14em;
+}
+
+.card svg {
+  background: #fe7c73;
+  fill: #333745;
+  height: 24em;
+  left: -3em;
+  position: relative;
+  top: -8.5em;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 20em;
+}
+
+.card,
+.card svg,
+.card .picture {
+  transition-duration: 2s;
+}
+
+.preview svg,
+.preview .picture {
+  cursor: pointer;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.preview .picture:hover,
+.preview .details:hover + .picture {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.preview svg:hover,
+.preview .details:hover + .picture svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.expanded .picture {
+  -webkit-animation: expand 1s ease-in-out;
+          animation: expand 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /*opacity: 0;*/
+  height: 100%;
+  left: 30%;
+  top: 0;
+  width: 70%;
+}
+
+.expanded svg {
+  height: 170%;
+  left: -25%;
+  position: relative;
+  top: -40%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 170%;
+}
+
+.expanded .view {
+  display: none;
+  opacity: 0;
+}
+
+div.expanded {
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  width: 100vw;
+}
+
+.expanded .details {
+  -webkit-animation: slide 0.8s ease-out;
+          animation: slide 0.8s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 40%;
+  z-index: 10;
+}
+
+.expanded .actions {
+  padding-top: 0;
+}
+
+.expanded h2,
+.expanded .title,
+.expanded .desc,
+.expanded .like,
+.expanded .trade,
+.expanded .close {
+  -webkit-animation: slide 0.4s;
+          animation: slide 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.expanded h2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.expanded .title {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.expanded .desc {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.expanded .like {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.expanded .trade {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.expanded .close {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
