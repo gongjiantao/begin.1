@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>火箭产品</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="../../../img/homimg/01699f56434ffe6ac7259e0fe866bf.png">
+
+<!--必要样式-->
+<link rel="stylesheet" href="dist/stylesheets/chromagallery.min.css">
+<link href="">
+<style type="text/css">
+body,html
+{
+	height: 100%;
+}
+.content
+{
+	width: 100%;
+	height: 100%;
+	margin: 10px auto;
+}
+@media screen and (min-width: 980px)  {
+  .content {
+	width: 70%;
+  }
+}		
+.mygallery
+{
+	margin: 25px 0;
+}
+/*导航样式*/
+.kk{
+	border-radius: 10px;
+	background-color: aliceblue;
+	color: black;
+	height: 50px;
+	margin: 5px;
+	display: flex; justify-content:center; align-items: center;
+}
+/*导航伪类*/
+.kk:hover{
+	-webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ -webkit-box-shadow: #ffffff 0px 0px 10px;
+ -moz-box-shadow: #ffffff 0px 0px 10px;
+  box-shadow: #ffffff 0px 0px 10px;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+a:hover{
+	text-decoration: none;
+	color: #000000;
+}
+body{
+	background-image: url(img/bgcolor/1.jpg);
+	background-size: 100%;
+}
+</style>
+
+</head>
+<body>
+	<div class="row">
+		<div class="col-lg-4"><a href="../../../kp.html#G"><img src="img/fh.png" width="100"></div>
+			<div class="col-lg-1 kk"><a href="htcp.html">航天产品</a></div>
+			<div class="col-lg-1 kk"><a href="fccp.html">飞船产品</a></div>
+			<div class="col-lg-1 kk"><a href="hj.html">火箭产品</a></div>
+			<div class="col-lg-1 kk"><a href="wx.html">卫星产品</a></div>
+			<div class="col-lg-4"></div>
+
+	</div>
+<div class="content">
+	<div class="chroma-gallery mygallery">
+		<img src="img/hj/kz.jpg" alt="“快舟”一号固体运载火箭" data-largesrc="img/hj/kz.jpg"  />
+		<img src="img/hj/cz7.jpg" alt="长征七号" data-largesrc="img/hj/cz7.jpg"/>
+		<img src="img/hj/cz3d.jpg" alt="长征三号丙" data-largesrc="img/hj/cz3d.jpg" />
+		<img src="img/hj/cz3j.jpg" alt="长征三号乙" data-largesrc="img/hj/cz3j.jpg" />
+		<img src="img/hj/cz3j.jpg" alt="长征三号甲" data-largesrc="img/hj/cz3j.jpg" />
+		<img src="img/hj/cz2f.jpg" alt="长征二号F" data-largesrc="img/hj/cz2f.jpg" />
+
+		<img src="img/hj/cz2d.jpg" alt="长征二号丁" data-largesrc="img/hj/cz2d.jpg" />
+
+		
+
+		<img src="img/hj/cz5.jpg" alt="长征五号" data-largesrc="img/hj/cz5.jpg" />
+
+		<img src="img/hj/cz6.jpg" alt="长征六号" data-largesrc="img/hj/cz6.jpg" />
+
+		<img src="img/hj/cz11.jpg" alt="长征十一号" data-largesrc="img/hj/cz11.jpg" />
+
+		<img src="img/hj/cz4b.jpg" alt="长征四号丙" data-largesrc="img/hj/cz4b.jpg" />
+
+		<img src="img/hj/cz4y.jpg" alt="长征四号乙" data-largesrc="img/hj/cz4y.jpg" />
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="dist/scripts/chromagallery.pkgd.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".mygallery").chromaGallery
+	({
+		color:'#000',
+		gridMargin:15,
+		maxColumns:5,
+		dof:true,
+		screenOpacity:0.8
+	});
+});
+</script>
+
+</body>
+</html>
