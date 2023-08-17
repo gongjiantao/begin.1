@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<link rel="shortcut icon" href="../../img/homimg/01699f56434ffe6ac7259e0fe866bf.png">
+
+<script src="static/js/jquery-1.10.2.js"></script>
+<style>
+:root {
+	--depth: 500px;
+	--turnLeft: 0.06turn;
+	--turnRight: -0.06turn;
+	--turn: var(--turnRight);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	height: 100%;
+	overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+	background: hsl(0 0% 10%);
+	perspective: 1000px;
+	perspective-origin: 50% 35%;
+}
+
+.building {
+	transform-style: preserve-3d;
+}
+
+.room {
+	position: relative;
+	border: 4vmax solid hsl(0 0% 10%);
+	height: 80vh;
+	width: 100vw;
+	scroll-snap-align: center;
+	transform-style: preserve-3d;
+}
+.room + .room {
+	border-top: 0;
+}
+
+.room::before,
+.room::after {
+	content: '';
+	position: absolute;
+	height: var(--depth);
+	width: 100%;
+	backface-visibility: hidden;
+}
+.room::before {
+	background:
+		radial-gradient(hsl(0 0% 100% / 10%), hsl(0 0% 0% / 10%)),
+		/*天花板*/
+		url(imgs/上.png) center / cover,
+		lightgray;
+	transform: rotatex(-90deg) scale(1.001);
+	transform-origin: center top;
+}
+.room::after {
+	bottom: 0;
+	background:
+		radial-gradient(hsl(0 0% 100% / 10%), hsl(0 0% 0% / 10%)),
+		/*地板*/
+		url(imgs/地板.jpg) center / cover,
+		sandybrown;
+	transform: rotatex(90deg);
+	transform-origin: center bottom;
+}
+.room-walls {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(to top, hsl(0 0% 90%) 2.5vh, transparent 0),
+		radial-gradient(hsl(0 0% 0% / 30%), hsl(0 0% 0% / 50%)),
+		/*背景*/
+		url(imgs/bj.jpg) center / cover,
+		darkgray;
+	transform: translatez(calc(var(--depth) * -1));
+	transform-style: preserve-3d;
+}
+.room-walls::before,
+.room-walls::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: var(--depth);
+}
+
+.room-walls::before {
+	right: 100%;
+	background:
+		linear-gradient(to top, hsl(0 0% 75%) 2.5vh, transparent 0),
+		radial-gradient(hsl(0 0% 100% / 10%), hsl(0 0% 0% / 10%)),
+/*左*/
+		url(imgs/左.png) center / cover,
+		gray;
+	transform: rotatey(90deg);
+	transform-origin: right center;
+}
+.room-walls::after {
+	left: 100%;
+	background:
+		linear-gradient(to top, hsl(0 0% 75%) 2.5vh, transparent 0),
+		radial-gradient(hsl(0 0% 100% / 10%), hsl(0 0% 0% / 10%)),
+		/*右*/
+		url(imgs/右.png) center / cover,
+		gray;
+	transform: rotatey(-90deg);
+	transform-origin: left center;
+}
+
+.room-content {
+	display: grid;
+	place-content: center;
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: clamp(1em, 20vmin, 8em);
+	font-weight: 200;
+	text-align: center;
+	text-shadow: 0 5px 10px hsl(0 0% 0% / 20%);
+	transform: translatez(calc(var(--depth) / -2)) rotatey(var(--turn));
+}
+
+.room:nth-child(odd) > .room-content {
+	--turn: var(--turnLeft);
+}</style>
+</head>
+<body>
+<main class="building">
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">负责人：龚建涛</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">资源集合：王杰、覃欣兰</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">布局架构：龚建涛</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">全栈：龚建涛</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">图形渲染：覃欣兰</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">内容填充：龚建涛</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">Logo设计:王杰</p>
+	</section>
+
+	<section class="room">
+		<div class="room-walls"></div>
+		<p class="room-content">最强辅助：尹虹元</p>
+	</section>
+
+	
+</main>
+
+
+</body>
+</html>
