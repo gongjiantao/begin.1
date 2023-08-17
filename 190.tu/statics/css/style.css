@@ -1,0 +1,301 @@
+﻿@charset "utf-8";
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ *
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.swiper-container {
+	height: 500px;
+	overflow: visible;
+}
+
+.pagination {
+	position: absolute;
+	left: 0;
+	text-align: center;
+	bottom: 105px;
+	width: 100%;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 32px;
+	height: 20px;
+	font-size: 0;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: width .8s;
+}
+
+.swiper-pagination-switch:before {
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 4px;
+	border-radius: 2px;
+	background: rgba(102, 102, 102, .5);
+	vertical-align: middle;
+	transition: width .8s, background-color .8s;
+	box-shadow: 0 3px 6px 0 rgba(33, 39, 81, 0.20);
+}
+
+.swiper-active-switch:before {
+	background: #fa6f66;
+	box-shadow: 0 3px 6px 0 rgba(250, 111, 102, .5);
+}
+
+.swiper-slide {
+	position: relative;
+	opacity: 0;
+	transition: opacity 0.7s ease-in-out;
+	overflow: hidden;
+}
+
+.swiper-slide-active {
+	opacity: 1;
+}
+
+.swiper-slide .img {
+	position: absolute;
+}
+
+.inner {
+	position: relative;
+	display: block;
+	width: 1180px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.banner-text {
+	position: absolute;
+	left: 0;
+	bottom: 150px;
+	z-index: 999;
+}
+
+.banner-text h3 {
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: #333333;
+	line-height: 36px;
+}
+
+.banner-text em {
+	font-style: normal;
+	color: #e41e2b;
+}
+
+.banner-text h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 48px;
+	color: #333333;
+	line-height: 60px;
+}
+
+.banner-text p {
+	margin-top: 10px;
+	font-size: 18px;
+	color: #333333;
+	line-height: 22px;
+}
+
+.banner-text .btn-primary {
+	box-shadow: 0 10px 20px 0 rgba(239, 35, 54, 0.20);
+	margin-top: 30px;
+	height: 40px;
+	line-height: 38px;
+	padding: 0 30px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #E41F2B;
+	display: inline-block;
+}
+
+.slide1 {
+	background: url(../images/bg-pc1.jpg) no-repeat center center;
+}
+
+.slide2 {
+	background: url(../images/bg-pc2.jpg) no-repeat center center;
+}
+
+.slide3 {
+	background: url(../images/bg-pc3.jpg) no-repeat center center;
+}
+
+.slide4 {
+	background: url(../images/bg-pc4.jpg) no-repeat center center;
+}
+
+.slide5 {
+	background: url(../images/bg-pc5.jpg) no-repeat center center;
+}
+
+.slide2 .img1 {
+	left: 0px;
+	bottom: 120px;
+	z-index: 9;
+	position: absolute;
+}
+
+.slide4 .img1 {
+	right: -190px;
+	bottom: 0px;
+	z-index: 9;
+	position: absolute;
+}
+
+.slide4 .img2 {
+	right: -190px;
+	bottom: 0px;
+	z-index: 9;
+	position: absolute;
+}
+
+.slide5 .img1 {
+	right: -190px;
+	bottom: 0px;
+	z-index: 9;
+	position: absolute;
+}
+
+.slide5 .img2 {
+	right: -190px;
+	bottom: 0px;
+	z-index: 9;
+	position: absolute;
+}
+/*波浪遮罩*/
+.cover{
+	background: url(../images/banner-cover.png) no-repeat center center;
+	position: absolute;
+    z-index: 9;
+    bottom: 0;
+    left: -1280px;
+    right: -1280px;
+    width: 2560px;
+    height: 60px;
+    margin: 0 auto;
+}
+/*底下四个导航*/
+.home-events {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-bottom: -38px;
+}
+
+.home-events-box {
+	max-width: 1210px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.home-events-box-wrapper {
+	width: 100%;
+	border-radius: 4px;
+	box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.10);
+}
+
+.home-events-box-wrapper:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.home-events-box-item {
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 120px;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 1);
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.home-events-box-item a {
+	display: block;
+	height: 100%;
+	padding: 34px 5px 34px 120px;
+}
+
+.home-events-box-item:hover i img:last-child {
+	opacity: 1;
+}
+
+.home-events-box-item:hover h2 {
+	color: #fa6f66;
+}
+
+.home-events-box-item i {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	width: 60px;
+	height: 60px;
+}
+
+.home-events-box-item i img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity .2s;
+	transition: opacity .2s;
+	will-change: opacity;
+}
+
+.home-events-box-item i img:last-child {
+	opacity: 0;
+}
+
+.home-events-box-item h2,
+.home-events-box-item p {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.home-events-box-item h2 {
+	margin-bottom: 4px;
+	font-size: 18px;
+	line-height: 22px;
+	color: #3B516A;
+	-webkit-transition: .2s;
+	transition: .2s;
+	will-change: color;
+}
+
+.home-events-box-item p {
+	font-size: 14px;
+	line-height: 20px;
+	color: #95989D;
+}

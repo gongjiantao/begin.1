@@ -1,0 +1,25 @@
+
+#toolbar{position:fixed;z-index:9999;right:5px;bottom:15%}
+#toolbar li{margin-bottom:3px;position:relative}
+#toolbar li,#toolbar li a{font-size:0;width:45px;height:45px;right:0}
+#toolbar li a{display:block;position:absolute;z-index:9;top:0;overflow:hidden;background:#dd3e20;-webkit-transition:all .5s ease;transition:all .5s ease;white-space:nowrap}
+#toolbar li .iconfont{width:45px;height:45px;background-color:#f67114;text-align:center;color:#2b2b2b;font-size:26px}
+#toolbar li .iconfont,#toolbar li .wz{display:inline-block;vertical-align:middle;line-height:45px}
+#toolbar li .wz{font-size:16px;color:#fff;padding-left:10px}
+#toolbar li.ewm .ewm-box{position:absolute;z-index:1;padding:5px;background:#dd3e20;width:110px;right:120%;bottom:0;opacity:0;visibility:hidden;-webkit-transform:translateX(100%);transform:translateX(100%);-webkit-transition:all .7s;transition:all .7s}
+#toolbar li.ewm .ewm-box p{margin-bottom:0}
+#toolbar li.ewm .ewm-box img{max-width:100%}
+#toolbar li.ewm .ewm-box:after{content:"";position:absolute;right:-5px;bottom:20px;width:0;height:0;line-height:0;font-size:0;overflow:hidden;border-width:5px;cursor:pointer;border-style:dashed dashed dashed solid;border-color:transparent transparent transparent #dd3e20;border-right:none}
+#toolbar li.ewm:hover .icon{background-position:-57px -180px}
+#toolbar li.ewm:hover .ewm-box{opacity:1;visibility:visible;-webkit-transform:translateY(0);transform:translateY(0)}
+#toolbar li.backtop{cursor:pointer}
+#toolbar li.backtop .iconfont{color:#fff;background-color:#dd3e20;font-size: 14px;font-weight: 600;}
+#toolbar li:hover a{width:200px}
+#toolbar li:hover .iconfont{background-color:#dd3e20;color:#fff}
+
+@media screen and (max-width:768px){
+#toolbar{display:none;}
+
+
+}
+
