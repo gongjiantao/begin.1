@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>百度地图示例</title>
     <!-- 引入百度地图API -->
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script> 
     <style>
         /* 设置地图容器的样式 */
         #map-container {
@@ -36,7 +36,7 @@
         var infoWindow = new BMap.InfoWindow("这里是北京"); // 创建信息窗口
         marker.openInfoWindow(infoWindow); // 打开信息窗口
 
-        // 添加点击事件监听
+        // 确保地图实例化后再添加事件监听器
         map.addEventListener("click", function(e) {
             // 点击地图后，添加新的标记
             var newPoint = new BMap.Point(e.point.lng, e.point.lat);
