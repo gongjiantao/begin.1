@@ -26,26 +26,37 @@
 
     function initializeMap() {
       var map = new BMap.Map("map");
-      var startPoint = new BMap.Point(106.551643, 29.562849); // 重庆市中心
-      var destination = "重庆解放碑"; // 目的地
 
-      // 添加导航控件
-      var navigationControl = new BMap.NavigationControl({
-        anchor: BMAP_ANCHOR_TOP_LEFT,
-        type: BMAP_NAVIGATION_CONTROL_LARGE
+      // 获取用户位置
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var userLocation = new BMap.Point(position.coords.longitude, position.coords.latitude);
+
+        // 添加导航控件
+        var navigationControl = new BMap.NavigationControl({
+          anchor: BMAP_ANCHOR_TOP_LEFT,
+          type: BMAP_NAVIGATION_CONTROL_LARGE
+        });
+        map.addControl(navigationControl);
+
+        // 设置地图中心为用户位置
+        map.centerAndZoom(userLocation, 13);
+
+        // 添加标记
+        var userMarker = new BMap.Marker(userLocation);
+        map.addOverlay(userMarker);
+
+        // 添加路线规划
+        var destination = "重庆解放碑";
+        var walking = new BMap.WalkingRoute(map, {
+          renderOptions: {
+            map: map,
+            autoViewport: true
+          }
+        });
+
+        // 开始步行导航
+        walking.search(userLocation, destination);
       });
-      map.addControl(navigationControl);
-
-      // 添加路线规划
-      var walking = new BMap.WalkingRoute(map, {
-        renderOptions: {
-          map: map,
-          autoViewport: true
-        }
-      });
-
-      // 开始步行导航
-      walking.search(startPoint, destination);
     }
 
     // 在页面加载完成后异步加载地图 API
