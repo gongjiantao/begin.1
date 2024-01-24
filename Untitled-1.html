@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百度地图示例</title>
+    <!-- 引入百度地图API -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script>
+    <style>
+        /* 设置地图容器的样式 */
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 地图容器 -->
+    <div id="map"></div>
+
+    <!-- JavaScript代码 -->
+    <script type="text/javascript">
+        // 初始化地图
+        var map = new BMap.Map("map"); // 创建地图实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 15); // 初始化地图，设置中心点和缩放级别
+
+        // 添加地图控件
+        var zoomCtrl = new BMap.ZoomControl();
+        map.addControl(zoomCtrl);
+
+        // 添加标记
+        var point = new BMap.Point(116.404, 39.915); // 北京的经纬度
+        var marker = new BMap.Marker(point); // 创建标记
+        map.addOverlay(marker); // 将标记添加到地图上
+
+        // 添加信息窗口
+        var infoWindow = new BMap.InfoWindow("这里是北京"); // 创建信息窗口
+        marker.openInfoWindow(infoWindow); // 打开信息窗口
+    </script>
+</body>
+</html>
