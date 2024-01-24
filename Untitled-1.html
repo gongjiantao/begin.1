@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>高级百度地图导航示例</title>
+  <title>直接导航到重庆解放碑示例</title>
   <meta charset="utf-8">
   <style>
     #map {
@@ -19,37 +19,10 @@
     var startPoint = new BMap.Point(106.551643, 29.562849); // 重庆市中心
     var destination = "重庆解放碑"; // 目的地
 
-    // 添加标注和信息窗口
-    var startMarker = new BMap.Marker(startPoint);
-    var startInfoWindow = new BMap.InfoWindow("起点：重庆市中心");
-    map.addOverlay(startMarker);
-    startMarker.addEventListener("click", function() {
-      this.openInfoWindow(startInfoWindow);
-    });
-
-    // 在页面加载完成后触发路线规划
+    // 在页面加载完成后触发导航
     window.onload = function () {
       map.centerAndZoom(startPoint, 13);
       map.enableScrollWheelZoom(true);
-
-      // 调整地图视野以包含起点和目的地
-      var bounds = new BMap.Bounds();
-      bounds.extend(startPoint);
-      var geoc = new BMap.Geocoder();
-      geoc.getPoint(destination, function(point) {
-        if (point) {
-          bounds.extend(point);
-          map.setViewport([startPoint, point], { margins: [10, 10, 10, 10] });
-        }
-      }, "重庆市");
-
-      // 添加目的地标注和信息窗口
-      var destinationMarker = new BMap.Marker();
-      map.addOverlay(destinationMarker);
-      var destinationInfoWindow = new BMap.InfoWindow("目的地：" + destination);
-      destinationMarker.addEventListener("click", function() {
-        this.openInfoWindow(destinationInfoWindow);
-      });
 
       // 添加导航控件
       var navigationControl = new BMap.NavigationControl({
