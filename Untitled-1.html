@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>百度地图高级功能示例</title>
+  <title>高级百度地图导航示例</title>
   <meta charset="utf-8">
   <style>
     #map {
       width: 100%;
-      height: 500px;
-    }
-    #suggestId {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 999;
+      height: 600px;
     }
   </style>
 </head>
 <body>
   <div id="map"></div>
-  <div id="suggestId"></div>
 
   <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script>
   <script type="text/javascript">
     var map = new BMap.Map("map");
-    var point = new BMap.Point(106.551643, 29.562849);
-    map.centerAndZoom(point, 13);
-    map.enableScrollWheelZoom(true);
+    var startPoint = new BMap.Point(106.551643, 29.562849); // 重庆市中心
+    var destination = "重庆解放碑"; // 目的地
 
-    // 添加导航控件
-    var navigationControl = new BMap.NavigationControl({
-      anchor: BMAP_ANCHOR_TOP_LEFT,
-      type: BMAP_NAVIGATION_CONTROL_LARGE
-    });
-    map.addControl(navigationControl);
-
-    // 添加输入提示
-    var ac = new BMap.Autocomplete({
-      "input" : "suggestId",
-      "location" : map
+    // 添加标注和信息窗口
+    var startMarker = new BMap.Marker(startPoint);
+    var startInfoWindow = new BMap.InfoWindow("起点：重庆市中心");
+    map.addOverlay(startMarker);
+    startMarker.addEventListener("click", function() {
+      this.openInfoWindow(startInfoWindow);
     });
 
-    // 添加路线规划
-    var driving = new BMap.DrivingRoute(map, {
-      renderOptions: {
-        map: map,
-        autoViewport: true
-      }
-    });
+    // 在页面加载完成后触发路线规划
+    window.onload = function () {
+      map.centerAndZoom(startPoint, 13);
+      map.enableScrollWheelZoom(true);
 
-    // 监听选中事件
-    ac.addEventListener("onconfirm", function(e) {
-      var value = e.item.value;
-      var address = value.province + value.city + value.district + value.street + value.business;
+      // 调整地图视野以包含起点和目的地
+      var bounds = new BMap.Bounds();
+      bounds.extend(startPoint);
+      var geoc = new BMap.Geocoder();
+      geoc.getPoint(destination, function(point) {
+        if (point) {
+          bounds.extend(point);
+          map.setViewport([startPoint, point], { margins: [10, 10, 10, 10] });
+        }
+      }, "重庆市");
 
-      // 起点为当前位置，终点为选中的位置
-      var start = point;
-      var end = new BMap.Point(value.point.lng, value.point.lat);
+      // 添加目的地标注和信息窗口
+      var destinationMarker = new BMap.Marker();
+      map.addOverlay(destinationMarker);
+      var destinationInfoWindow = new BMap.InfoWindow("目的地：" + destination);
+      destinationMarker.addEventListener("click", function() {
+        this.openInfoWindow(destinationInfoWindow);
+      });
 
-      // 开始导航
-      driving.search(start, end);
-    });
+      // 添加导航控件
+      var navigationControl = new BMap.NavigationControl({
+        anchor: BMAP_ANCHOR_TOP_LEFT,
+        type: BMAP_NAVIGATION_CONTROL_LARGE
+      });
+      map.addControl(navigationControl);
+
+      // 添加路线规划
+      var walking = new BMap.WalkingRoute(map, {
+        renderOptions: {
+          map: map,
+          autoViewport: true
+        }
+      });
+
+      // 开始步行导航
+      walking.search(startPoint, destination);
+    };
   </script>
 </body>
 </html>
