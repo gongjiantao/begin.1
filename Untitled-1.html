@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>直接导航到重庆解放碑示例</title>
+  <title>自动导航到重庆解放碑示例</title>
   <meta charset="utf-8">
   <style>
     #map {
@@ -13,16 +13,21 @@
 <body>
   <div id="map"></div>
 
-  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script>
   <script type="text/javascript">
-    var map = new BMap.Map("map");
-    var startPoint = new BMap.Point(106.551643, 29.562849); // 重庆市中心
-    var destination = "重庆解放碑"; // 目的地
+    function loadMapScript() {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX";
+      document.head.appendChild(script);
+      script.onload = function () {
+        initializeMap();
+      };
+    }
 
-    // 在页面加载完成后触发导航
-    window.onload = function () {
-      map.centerAndZoom(startPoint, 13);
-      map.enableScrollWheelZoom(true);
+    function initializeMap() {
+      var map = new BMap.Map("map");
+      var startPoint = new BMap.Point(106.551643, 29.562849); // 重庆市中心
+      var destination = "重庆解放碑"; // 目的地
 
       // 添加导航控件
       var navigationControl = new BMap.NavigationControl({
@@ -41,7 +46,10 @@
 
       // 开始步行导航
       walking.search(startPoint, destination);
-    };
+    }
+
+    // 在页面加载完成后异步加载地图 API
+    window.onload = loadMapScript;
   </script>
 </body>
 </html>
