@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>百度地图API示例</title>
+  <title>百度地图高级功能示例</title>
   <meta charset="utf-8">
   <style>
     #map {
       width: 100%;
-      height: 400px;
+      height: 500px;
+    }
+    #suggestId {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
   <div id="map"></div>
+  <div id="suggestId"></div>
 
-  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=TptQiGIGQx9jnMaQgo8wiurWaxuTpCEX"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_AK"></script>
   <script type="text/javascript">
-    // 创建地图实例
     var map = new BMap.Map("map");
+    var point = new BMap.Point(106.551643, 29.562849);
+    map.centerAndZoom(point, 13);
+    map.enableScrollWheelZoom(true);
 
-    // 创建点坐标
-    var point = new BMap.Point(116.404, 39.915);
+    // 添加导航控件
+    var navigationControl = new BMap.NavigationControl({
+      anchor: BMAP_ANCHOR_TOP_LEFT,
+      type: BMAP_NAVIGATION_CONTROL_LARGE
+    });
+    map.addControl(navigationControl);
 
-    // 初始化地图，设置中心点坐标和地图级别
-    map.centerAndZoom(point, 15);
-
-    // 添加标注
-    var marker = new BMap.Marker(point);
-    map.addOverlay(marker);
-
-    // 添加信息窗口
-    var infoWindow = new BMap.InfoWindow("Hello Baidu Map!");
-    marker.addEventListener("click", function () {
-      this.openInfoWindow(infoWindow);
+    // 添加输入提示
+    var ac = new BMap.Autocomplete({
+      "input" : "suggestId",
+      "location" : map
     });
 
-    // 启用滚轮缩放
-    map.enableScrollWheelZoom(true);
+    // 添加路线规划
+    var driving = new BMap.DrivingRoute(map, {
+      renderOptions: {
+        map: map,
+        autoViewport: true
+      }
+    });
+
+    // 监听选中事件
+    ac.addEventListener("onconfirm", function(e) {
+      var value = e.item.value;
+      var address = value.province + value.city + value.district + value.street + value.business;
+
+      // 起点为当前位置，终点为选中的位置
+      var start = point;
+      var end = new BMap.Point(value.point.lng, value.point.lat);
+
+      // 开始导航
+      driving.search(start, end);
+    });
   </script>
 </body>
 </html>
