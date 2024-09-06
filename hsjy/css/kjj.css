@@ -36,7 +36,7 @@ ul{list-style:none}
 .pavilion-container .tab-content{position:absolute;top:65px;transition:all .5s linear;opacity:0;z-index:-1;height:0;width:100%}
 .pavilion-container .tab-content.show{height:auto;opacity:1;top:0;z-index:1}
 .pavilion-container .tab-content .col-sm-3{padding:0 10px}
-.pavilion-container .tab-content .col-sm-3 .tab-card{position:relative;padding:20px;background:#fff;border-radius:2px;overflow:hidden;cursor:pointer;transition:.2s linear}
+.pavilion-container .tab-content .col-sm-3 .tab-card{position:relative;padding:20px;background:#d87f7f;border-radius:2px;overflow:hidden;cursor:pointer;transition:.2s linear}
 /*大卡片*/
 .pavilion-container .tab-content .col-sm-3 .tab-card.tab-card-lg{position:relative;height:420px}
 .pavilion-container .tab-content .col-sm-3 .tab-card:before{position:absolute;content:'';top:0;left:0;right:0;height:4px;border-radius:1px 1px 0 0}
