@@ -29,6 +29,7 @@
 	font-weight:bold;
 	padding-bottom:10px;
 }
+
 .note ul li p{
 	font-family: "Reenie Beanie" ,arial,sans-serif,΢���ź�;
 	font-size:110%;
@@ -47,7 +48,7 @@
 	-o-transform:rotate(5deg);
 	position:relative;
 	top:5px;
-  background:#cfc;
+  background:rgb(215, 232, 215);
 
 }
 .note ul li:nth-child(5n) a{
@@ -56,7 +57,7 @@
 	-o-transform:rotate(7deg);
 	position:relative;
 	top:5px;
-	background:#ccf;
+	background:rgb(242, 190, 190);
 }
 .note ul li a:hover,ul li a:focus{
 	-moz-box-shadow:10px 10px 7px rgba(0,0,0,7);
